@@ -1,0 +1,469 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+<body>
+
+    <header>
+        <div class="container-fluid py-1 d-none d-lg-block top-bar">
+            <div class="container-fluid">
+                <nav class="d-flex justify-content-center">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Find a job</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Find a vet</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">News</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">SciQuest</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Login</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-light bottom-bar ">
+            <div class="container-fluid" style="max-width:1000px">
+                <a class="navbar-brand" href="#">
+                    <img src="IMG/NZVA.png" alt="Logo" class="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto ">
+
+                        <li class="nav-item d-lg-none">
+                            <a class="nav-link" href="#">Find a job</a>
+                        </li>
+                        <li class="nav-item d-lg-none">
+                            <a class="nav-link" href="#">Find a vet</a>
+                        </li>
+                        <li class="nav-item d-lg-none">
+                            <a class="nav-link" href="#">News</a>
+                        </li>
+                        <li class="nav-item d-lg-none">
+                            <a class="nav-link" href="#">SciQuest</a>
+                        </li>
+                        <li class="nav-item d-lg-none">
+                            <a class="nav-link" href="#">Shop</a>
+                        </li>
+                        <li class="nav-item d-lg-none">
+                            <a class="nav-link" href="#">About us</a>
+                        </li>
+                        <li class="nav-item d-lg-none">
+                            <a class="nav-link" href="#">Contact us</a>
+                        </li>
+                        <li class="nav-item d-lg-none">
+                            <a class="nav-link" href="#">Login</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="membershipDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Membership
+                            </a>
+                            <ul class="dropdown-menu " aria-labelledby="membershipDropdown">
+
+                                <li><a class="dropdown-item" href="#">Link 1</a></li>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a class="dropdown-item sub-item" href="#">Sub-Link 1</a>
+                                        <a class="dropdown-item sub-item" href="#">Sub-Link 2</a>
+                                        <a class="dropdown-item sub-item" href="#">Sub-Link 3</a>
+                                        <a class="dropdown-item sub-item" href="#">Sub-Link 4</a>
+                                    </li>
+                                </ul>
+                                <li><a class="dropdown-item" href="#">Link 2</a></li>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a class="dropdown-item sub-item" href="#">Sub-Link 1</a>
+                                        <a class="dropdown-item sub-item" href="#">Sub-Link 2</a>
+                                        <a class="dropdown-item sub-item" href="#">Sub-Link 3</a>
+                                    </li>
+                                </ul>
+                                <li><a class="dropdown-item" href="#">Link 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="membershipDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Clinical resources
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="membershipDropdown">
+                                <li><a class="dropdown-item" href="#">Link 1</a></li>
+                                <li><a class="dropdown-item" href="#">Link 2</a></li>
+                                <li><a class="dropdown-item" href="#">Link 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="membershipDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Professional resources
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="membershipDropdown">
+                                <li><a class="dropdown-item" href="#">Link 1</a></li>
+                                <li><a class="dropdown-item" href="#">Link 2</a></li>
+                                <li><a class="dropdown-item" href="#">Link 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="membershipDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                CPD & events
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="membershipDropdown">
+                                <li><a class="dropdown-item" href="#">Link 1</a></li>
+                                <li><a class="dropdown-item" href="#">Link 2</a></li>
+                                <li><a class="dropdown-item" href="#">Link 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="membershipDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Policy & advocacy
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="membershipDropdown">
+                                <li><a class="dropdown-item" href="#">Link 1</a></li>
+                                <li><a class="dropdown-item" href="#">Link 2</a></li>
+                                <li><a class="dropdown-item" href="#">Link 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="membershipDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                For the public
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="membershipDropdown">
+                                <li><a class="dropdown-item" href="#">Link 1</a></li>
+                                <li><a class="dropdown-item" href="#">Link 2</a></li>
+                                <li><a class="dropdown-item" href="#">Link 3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="hero-container container-fluid mb-4" style="">
+        <div class="container-fluid px-2" style="max-width:1200px">
+            <div class="row">
+                <div class="col-lg-6 p-4 w-bg">
+                    <h1>Join the NZVA</h1>
+                    <h3>Enim excepteur excepteur minim mollit</h3>
+                    <p>Esse consectetur eu cillum officia tempor minim esse cillum minim veniam deserunt qui consectetur ullamco. Reprehenderit in tempor ut.</p>
+                    <a href="" class="plain-button lg-button">Pricing &amp; registration</a> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid p-2" style="max-width:1200px">
+        <div class="row l-bg my-4 p-4">
+            <div class="col">
+                <div class="container-fluid py-2 px-0">
+                    <div class="row">
+                        <div class="col">
+                            <h2>Who we are</h2>
+                            <h3>Enim excepteur excepteur minim mollit</h3>
+                            <p>Dolor aute ex culpa sit ea ullamco cillum amet non esse ea do. Quis fugiat sunt voluptate sunt aute commodo do et sit labore consequat commodo ad sunt. Aliqua irure voluptate amet in. Quis aliqua labore non nostrud minim adipisicing incididunt sint reprehenderit voluptate sint occaecat. Est incididunt commodo do mollit do quis ad reprehenderit sunt veniam. Eiusmod eiusmod aute occaecat labore cillum consequat velit aliquip laboris reprehenderit aliquip voluptate labore. Laboris incididunt commodo elit. </p>
+                            <a href="" class="plain-button lg-button">About the NZVA</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row w-bg my-4 p-4">
+            <div class="col">
+                <div class="container-fluid py-2 px-0">
+                    <div class="row">
+                        <div class="col">
+                            <h2>NZVA News</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h3 class="lead-in">Latest news</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 my-3">
+                            <div class="content-box">
+                                <div class="content-box-image cbi-sm" style="background:url('https://picsum.photos/seed/1254345345/700/300');">
+                                </div>
+                                <div class="content-box-text m-auto">
+                                    <h5>Exercitation eu elit consequat ea</h5>
+                                    <p>Aliquip labore magna id aute laborum eiusmod ex. Empor id reprehenderit sit quis aute occaecat Fugiat aliqua laborum Lorem ut minim laboris nostrud laboris. Dolore adipisicing culpa ad quis mollit amet aliquip sunt nisi aute qui exercitation.</p>
+                                </div>
+                                <div class="content-box-button">
+                                    <a href="" class="plain-button sm-button">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 my-3">
+                            <div class="content-box">
+                                <div class="content-box-image cbi-sm" style="background:url('https://picsum.photos/seed/543578223/400/300');">
+                                </div>
+                                <div class="content-box-text m-auto">
+                                    <h5>Tempor id reprehenderit sit quis aute occaecat ullamco.</h5>
+                                    <p class="small-text">Pariatur minim commodo incididunt culpa nostrud duis labore nisi sit consectetur eiusmod ex.</p>
+                                </div>
+                                <div class="content-box-button">
+                                    <a href="" class="plain-button sm-button">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 my-3">
+                            <div class="content-box">
+                                <div class="content-box-image cbi-sm" style="background:url('https://picsum.photos/seed/39019245/400/300');">
+                                </div>
+                                <div class="content-box-text m-auto">
+                                    <h5>Duis ipsum exercitation ullamco.</h5>
+                                    <p class="small-text">Occaecat in minim cupidatat. Ullamco laborum eiusmod ad irure qui pariatur do ipsum esse.</p>
+                                </div>
+                                <div class="content-box-button">
+                                    <a href="" class="plain-button sm-button">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <a href="" class="bg-button lg-button">All news</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row l-bg my-4 p-4">
+            <div class="col">
+                <div class="container-fluid py-2 px-0">
+                    <div class="row">
+                        <div class="col">
+                            <h2>Upcoming courses & events</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 my-3">
+                            <div class="content-box">
+                                <div class="content-box-image cbi-sm" style="background:url('https://picsum.photos/seed/3429234/400/300');">
+                                </div>
+                                <div class="content-box-text m-auto">
+                                    <h5>Exercitation eu elit consequat ea</h5>
+                                    <p class="small-text">Aliquip labore magna id aute laborum eiusmod ex. empor id reprehenderit sit quis aute occaecat</p>
+                                </div>
+                                <div class="content-box-button">
+                                    <a href="" class="plain-button sm-button">Bottom aligned button</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 my-3">
+                            <div class="content-box">
+                                <div class="content-box-image cbi-sm" style="background:url('https://picsum.photos/seed/34299575/400/300');">
+                                </div>
+                                <div class="content-box-text m-auto">
+                                    <h5>Tempor id reprehenderit sit quis aute occaecat ullamco.</h5>
+                                    <p class="small-text">Pariatur minim commodo incididunt culpa nostrud duis labore nisi sit consectetur eiusmod ex.</p>
+                                </div>
+                                <div class="content-box-button">
+                                    <a href="" class="plain-button sm-button">Bottom aligned button</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 my-3">
+                            <div class="content-box">
+                                <div class="content-box-image cbi-sm" style="background:url('https://picsum.photos/seed/43409348/400/300');">
+                                </div>
+                                <div class="content-box-text m-auto">
+                                    <h5>Duis ipsum exercitation ullamco.</h5>
+                                    <p class="small-text">Occaecat in minim cupidatat. Ullamco laborum eiusmod ad irure qui pariatur do ipsum esse.</p>
+                                </div>
+                                <div class="content-box-button">
+                                    <a href="" class="plain-button sm-button">Bottom aligned button</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 my-3">
+                            <div class="content-box">
+                                <div class="content-box-image cbi-sm" style="background:url('https://picsum.photos/seed/2442398/400/300');">
+                                </div>
+                                <div class="content-box-text m-auto">
+                                    <h5>Duis ipsum exercitation ullamco.</h5>
+                                    <p class="small-text">Occaecat in minim cupidatat. Ullamco laborum eiusmod ad irure qui pariatur do ipsum esse.</p>
+                                </div>
+                                <div class="content-box-button">
+                                    <a href="" class="plain-button sm-button">Bottom aligned button</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <a href="" class="bg-button lg-button">All events</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row w-bg my-4 p-4">
+            <div class="col">
+                <div class="container-fluid py-2 px-0">
+                    <div class="row">
+
+                        <div class="col-lg-4 m-auto">
+                            <h2>Our Partners</h2>
+                            <h3>Enim excepteur excepteur minim mollit</h3>
+
+                            <a href="" class="plain-button lg-button">About our partners</a>
+                        </div>
+                        <div class="col-lg-8 my-2 p-4" style="background:rgba(0,0,0,0.04); border-radius:10px;">
+                            <img src="IMG/sponsors.png" style="" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid footer p-4">
+        <div class="container-fluid p-4" style="max-width:1300px;">
+            <div class="row">
+                <div class="col-lg-3 px-4">
+                    <img src="IMG/nzva_w.png" style="width:100%;">
+
+                </div>
+
+                <div class="col-lg-3 px-4">
+                    <ul class="nav flex-column footer-nav">
+                        <li class="nav-item nav-item-header">
+                            <a class="nav-link" href="#">Do velit cupidatat</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Aute magna occaecat</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Magna sunt</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Culpa nostrud</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Do velit</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="col-lg-3 px-4">
+                    <ul class="nav flex-column footer-nav">
+                        <li class="nav-item nav-item-header">
+                            <a class="nav-link" href="#">Cillum veniam sunt</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Ad do fugiat</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Reprehenderit consectetur</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Adipisicing laborum </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sint enim dolor </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 px-4">
+                    <ul class="nav flex-column footer-nav">
+                        <li class="nav-item nav-item-header">
+                            <a class="nav-link" href="#">Est nulla minim</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Aute magna occaecat</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Exercitation consectetur</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">laborum et dolo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"> Dolor ex irure</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="sponsors">
+
+        <div class="closer-button">
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSponsors" aria-expanded="false" aria-controls="collapseSponsors">
+                <p>›</p>
+            </button>
+        </div>
+
+        <div class="sponsors-inner">
+
+            <div class="container-fluid collapse show" id="collapseSponsors" style="max-width: 1300px;">
+
+                <div class="row p-0">
+
+                    <div class="col-lg-4">
+
+
+                        <div class="sponsors-title">
+                            <h4 class="lead-in">Thank you to our sponsors</h4>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8">
+                        <div  class="carousel slide carousel-fade" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="IMG/logos.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="IMG/logos2.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="IMG/logos3.jpg" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
