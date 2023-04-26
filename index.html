@@ -11,6 +11,12 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
 
+
+    <style>
+
+
+    </style>
+
 </head>
 
 
@@ -44,13 +50,35 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Login</a>
                         </li>
+                        <li class="nav-item search-input">
+                            <div class="search-container">
+                                <input type="text" class="form-control" placeholder="Search" />
+                                <button type="submit" class="btn btn-search">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="nav-item search-toggle">
+                            <a class="nav-link search-toggler">
+                                <i class="bi bi-search search-icon" style="font-size: 0.7rem;"></i>
+                                <i class="bi bi-x close-icon" style="display:none;"></i>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
             </div>
         </div>
 
+        <script>
+            document.querySelector('.search-toggle').addEventListener('click', function () {
+                document.querySelector('.nav').classList.toggle('search-active');
+                document.querySelector('.search-icon').style.display = document.querySelector('.search-icon').style.display === 'none' ? '' : 'none';
+                document.querySelector('.close-icon').style.display = document.querySelector('.close-icon').style.display === 'none' ? '' : 'none';
+            });
+        </script>
+
         <nav class="navbar navbar-expand-lg navbar-light bottom-bar ">
-            <div class="container-fluid" style="max-width:1000px">
+            <div class="container-fluid" style="max-width:1080px">
                 <a class="navbar-brand" href="#">
                     <img src="IMG/NZVA.png" alt="Logo" class="logo">
                 </a>
@@ -62,104 +90,114 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav ms-auto ">
 
-                        <li class="nav-item d-lg-none">
-                            <a class="nav-link" href="#">Find a job</a>
-                        </li>
-                        <li class="nav-item d-lg-none">
-                            <a class="nav-link" href="#">Find a vet</a>
-                        </li>
-                        <li class="nav-item d-lg-none">
-                            <a class="nav-link" href="#">News</a>
-                        </li>
-                        <li class="nav-item d-lg-none">
-                            <a class="nav-link" href="#">SciQuest</a>
-                        </li>
-                        <li class="nav-item d-lg-none">
-                            <a class="nav-link" href="#">Shop</a>
-                        </li>
-                        <li class="nav-item d-lg-none">
-                            <a class="nav-link" href="#">About us</a>
-                        </li>
-                        <li class="nav-item d-lg-none">
-                            <a class="nav-link" href="#">Contact us</a>
-                        </li>
-                        <li class="nav-item d-lg-none">
-                            <a class="nav-link" href="#">Login</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="membershipDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Membership
-                            </a>
-                            <ul class="dropdown-menu " aria-labelledby="membershipDropdown">
+                        <ul class="d-lg-none quick-links">
 
-                                <li><a class="dropdown-item" href="#">Link 1</a></li>
-                                <ul class="sub-menu">
-                                    <li>
-                                        <a class="dropdown-item sub-item" href="#">Sub-Link 1</a>
-                                        <a class="dropdown-item sub-item" href="#">Sub-Link 2</a>
-                                        <a class="dropdown-item sub-item" href="#">Sub-Link 3</a>
-                                        <a class="dropdown-item sub-item" href="#">Sub-Link 4</a>
-                                    </li>
-                                </ul>
-                                <li><a class="dropdown-item" href="#">Link 2</a></li>
-                                <ul class="sub-menu">
-                                    <li>
-                                        <a class="dropdown-item sub-item" href="#">Sub-Link 1</a>
-                                        <a class="dropdown-item sub-item" href="#">Sub-Link 2</a>
-                                        <a class="dropdown-item sub-item" href="#">Sub-Link 3</a>
-                                    </li>
-                                </ul>
-                                <li><a class="dropdown-item" href="#">Link 3</a></li>
+
+
+                            <br><h4 class="d-lg-none">Quick links</h4>
+                            <li class="nav-item d-lg-none"><a class="nav-link" href="#">Find a job</a></li>
+                            <li class="nav-item d-lg-none"><a class="nav-link" href="#">Find a vet</a></li>
+                            <li class="nav-item d-lg-none"><a class="nav-link" href="#">News</a></li>
+                            <li class="nav-item d-lg-none"><a class="nav-link" href="#">SciQuest</a></li>
+                            <li class="nav-item d-lg-none"><a class="nav-link" href="#">Shop</a></li>
+                            <li class="nav-item d-lg-none"><a class="nav-link" href="#">Contact us</a></li>
+                            <li class="nav-item d-lg-none"><a class="nav-link" href="#">Login</a></li>
+                        </ul>
+
+                        <br><h4 class="d-lg-none">Resources</h4>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="membershipDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Membership<i class="bi-chevron-down"></i>
+                            </a> 
+                            <ul class="dropdown-menu " aria-labelledby="membershipDropdown">
+                                <li><a class="dropdown-item" href="#">For members</a></li>
+
+                                <li><a class="dropdown-item" href="#">Join the NZVA</a></li>
+
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="membershipDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Clinical resources
+                                Clinical resources<i class="bi-chevron-down"></i>
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="membershipDropdown">
-                                <li><a class="dropdown-item" href="#">Link 1</a></li>
-                                <li><a class="dropdown-item" href="#">Link 2</a></li>
-                                <li><a class="dropdown-item" href="#">Link 3</a></li>
+                                <li><a class="dropdown-item" href="#">General</a></li>
+                                <li><a class="dropdown-item" href="#">Companion animal</a></li>
+                                <li><a class="dropdown-item" href="#">Dairy cattle</a></li>
+                                <li><a class="dropdown-item" href="#">Deer</a></li>
+                                <li><a class="dropdown-item" href="#">Equine</a></li>
+                                <li><a class="dropdown-item" href="#">Pigs</a></li>
+                                <li><a class="dropdown-item" href="#">Sheep and beef cattle</a></li>
+                                <li><a class="dropdown-item" href="#">Wildlife and avian</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="membershipDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Professional resources
+                                Non-clinical resources<i class="bi-chevron-down"></i>
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="membershipDropdown">
-                                <li><a class="dropdown-item" href="#">Link 1</a></li>
-                                <li><a class="dropdown-item" href="#">Link 2</a></li>
-                                <li><a class="dropdown-item" href="#">Link 3</a></li>
+                                <li><a class="dropdown-item" href="#">Mentoring</a></li>
+                                <li><a class="dropdown-item" href="#">Disaster recovery</a></li>
+                                <li><a class="dropdown-item" href="#">Wellbeing and support</a></li>
+                                <li><a class="dropdown-item" href="#">Climate change</a></li>
+                                <li><a class="dropdown-item" href="#">Practice management</a></li>
+                                <li><a class="dropdown-item" href="#">Animal welfare</a></li>
+
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="membershipDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                CPD & events
+                                CPD & events<i class="bi-chevron-down"></i>
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="membershipDropdown">
-                                <li><a class="dropdown-item" href="#">Link 1</a></li>
-                                <li><a class="dropdown-item" href="#">Link 2</a></li>
-                                <li><a class="dropdown-item" href="#">Link 3</a></li>
+                                <li><a class="dropdown-item" href="#">MyCPD</a></li>
+                                <li><a class="dropdown-item" href="#">Conferences</a></li>
+                                <li><a class="dropdown-item" href="#">Courses and workshops</a></li>
+                                <li><a class="dropdown-item" href="#">Webinar recordings</a></li>
+                                <li><a class="dropdown-item" href="#">SciQuest</a></li>
+                                <li><a class="dropdown-item" href="#">VetScholar</a></li>
+                                <li><a class="dropdown-item" href="#">Become a tutor</a></li>
+                                <li><a class="dropdown-item" href="#">Apply for CPD accreditation </a></li>
+                                <li><a class="dropdown-item" href="#">CPD pathways </a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="membershipDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Policy & advocacy
+                                Policy & advocacy<i class="bi-chevron-down"></i>
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="membershipDropdown">
-                                <li><a class="dropdown-item" href="#">Link 1</a></li>
-                                <li><a class="dropdown-item" href="#">Link 2</a></li>
-                                <li><a class="dropdown-item" href="#">Link 3</a></li>
+                                <li><a class="dropdown-item" href="#">Policies and position statements</a></li>
+                                <li><a class="dropdown-item" href="#">Advocacy</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="membershipDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                For the public
+                                For the public<i class="bi-chevron-down"></i>
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="membershipDropdown">
-                                <li><a class="dropdown-item" href="#">Link 1</a></li>
-                                <li><a class="dropdown-item" href="#">Link 2</a></li>
-                                <li><a class="dropdown-item" href="#">Link 3</a></li>
+                                <li><a class="dropdown-item" href="#">Find a vet</a></li>
+                                <li><a class="dropdown-item" href="#">Disaster recovery</a></li>
+                                <li><a class="dropdown-item" href="#">Become a veterinarian</a></li>
+                                <li><a class="dropdown-item" href="#">For pet owners</a></li>
+                                <li><a class="dropdown-item" href="#">For rural animal owners</a></li>                               
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="membershipDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                About us<i class="bi-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="membershipDropdown">
+                                <li><a class="dropdown-item" href="#">Our centenary</a></li>
+                                <li><a class="dropdown-item" href="#">What we do</a></li>
+                                <li><a class="dropdown-item" href="#">Strategic plan</a></li>
+                                <li><a class="dropdown-item" href="#">NZVA Board</a></li>
+                                <li><a class="dropdown-item" href="#">Member Advisory Group (MAG)</a></li>  
+                                <li><a class="dropdown-item" href="#">Our staff</a></li>  
+                                <li><a class="dropdown-item" href="#">Our partners</a></li>
+                                <li><a class="dropdown-item" href="#">Branches and networks</a></li>
+                                <li><a class="dropdown-item" href="#">NZVA Awards</a></li>  
+                                <li><a class="dropdown-item" href="#">Publications</a></li>                               
                             </ul>
                         </li>
                     </ul>
@@ -358,843 +396,842 @@
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toggle.classList.add('bi-chevron-down');<br>
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});<br>
                                 &nbsp;&nbsp;&nbsp;&nbsp;});<br>
-                                });                                
-                            </code>
-                        </div>
+                            });                                
+                        </code>
                     </div>
                 </div>
-
-
             </div>
-            <script>
-                document.addEventListener('DOMContentLoaded', function () {
-                    let arrowToggles = document.querySelectorAll('.arrow-toggle');
 
-                    arrowToggles.forEach(function (toggle) {
-                        let target = document.querySelector(toggle.getAttribute('data-bs-target'));
-                        let bsCollapse = new bootstrap.Collapse(target, { toggle: false });
 
-                        toggle.addEventListener('click', function (event) {
-                            event.preventDefault();
-                            bsCollapse.toggle();
-                        });
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                let arrowToggles = document.querySelectorAll('.arrow-toggle');
 
-                        target.addEventListener('show.bs.collapse', function () {
-                            toggle.classList.remove('bi-chevron-down');
-                            toggle.classList.add('bi-chevron-up');
-                        });
+                arrowToggles.forEach(function (toggle) {
+                    let target = document.querySelector(toggle.getAttribute('data-bs-target'));
+                    let bsCollapse = new bootstrap.Collapse(target, { toggle: false });
 
-                        target.addEventListener('hide.bs.collapse', function () {
-                            toggle.classList.remove('bi-chevron-up');
-                            toggle.classList.add('bi-chevron-down');
-                        });
+                    toggle.addEventListener('click', function (event) {
+                        event.preventDefault();
+                        bsCollapse.toggle();
+                    });
+
+                    target.addEventListener('show.bs.collapse', function () {
+                        toggle.classList.remove('bi-chevron-down');
+                        toggle.classList.add('bi-chevron-up');
+                    });
+
+                    target.addEventListener('hide.bs.collapse', function () {
+                        toggle.classList.remove('bi-chevron-up');
+                        toggle.classList.add('bi-chevron-down');
                     });
                 });
-            </script>
-            <div class="col-12 col-md-9 page-content p-2">
-                <div class="container-fluid p-0 w-bg">
-                    <div class="row">
-                        <div class="col">
-                            <div class="page-feature" style="background:url('https://picsum.photos/seed/1681265028490/1920/600');">
-                                <div class="CSS-demo">
-                                    <button class="CSS-button bi-chevron-down arrow-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#CSS-feature" aria-expanded="false" aria-controls="CSS-feature">
-                                        Title styles
-                                    </button>
-                                    <div class="collapse" id="CSS-feature">
-                                        <div class="card card-body">
-                                            <code>  
-                                                .feature-header{<br>
-                                                &nbsp;&nbsp;&nbsp;&nbsp;background: white;<br>
-                                                &nbsp;&nbsp;&nbsp;&nbsp;display: inline-block;<br>}<br><br>
-                                                .page-feature{<br>
-                                                &nbsp;&nbsp;&nbsp;&nbsp;width: 100%;<br>
-                                                &nbsp;&nbsp;&nbsp;&nbsp;border-radius: 0.5rem;<br>
-                                                &nbsp;&nbsp;&nbsp;&nbsp;padding: 12rem 1.4rem 1rem 1.4rem;<br>
-                                                &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom: 1rem;<br>
-                                                &nbsp;&nbsp;&nbsp;&nbsp;background-size: cover!important;<br>}                                           
-                                            </code>
-                                        </div>
-                                    </div>
-                                </div>                               
-                                <h1 class="feature-header">Page title</h1>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row px-4 my-2">
-                        <div class="col">
-                            <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
-                                <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                    <li class="breadcrumb-item"><a href="#">Previous page</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Current page</li>
-                                </ol>
-                            </nav>
+            });
+        </script>
+        <div class="col-12 col-md-9 page-content p-2">
+            <div class="container-fluid p-0 w-bg">
+                <div class="row">
+                    <div class="col">
+                        <div class="page-feature" style="background:url('https://picsum.photos/seed/1681265028490/1920/600');">
                             <div class="CSS-demo">
-                                <button class="CSS-button bi-chevron-down arrow-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#CSS-breadcrumbs" aria-expanded="false" aria-controls="CSS-breadcrumbs">
-                                    Breadcrumb styles
+                                <button class="CSS-button bi-chevron-down arrow-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#CSS-feature" aria-expanded="false" aria-controls="CSS-feature">
+                                    Title styles
                                 </button>
-                                <div class="collapse" id="CSS-breadcrumbs">
+                                <div class="collapse" id="CSS-feature">
                                     <div class="card card-body">
-                                        <code>
-                                            .breadcrumb{<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;font-size:0.8rem;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom:0.5rem;<br>}<br><br>
-                                            .breadcrumb a{<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;color:#0077aa;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;font-weight: 700;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;text-decoration: none;<br>}                                       
-                                        </code>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row px-4 my-2">
-                        <div class="col">
-                            <div class="section-heading">
-                                <h3 class="green-text">Overview</h3>
-                            </div>
-                            <p>This template is built using Bootstrap 5.2.3 CSS and JS, along with custom CSS for enhanced styling. It serves as a design guide for the new website, providing a visual direction and theme. Developers should adapt and optimize the template as needed to ensure it's fit for purpose, user-friendly, and compatible across devices and platforms.</p>
-                        </div>
-                    </div>
-
-                    <div class="row px-4 my-2">
-                        <div class="col">
-                            <div class="section-heading lead-in">
-                                <h3 class="green-text">Spacing</h3>
-                            </div>
-                            <h4>Sidebar and content-page spacing</h4>
-                            <img src="IMG/spacing.png" alt="" class="w-100">
-
-                            <h4 class="lead-in">Homepage/ pages without sidebar &nbsp;&nbsp;&nbsp;<a href="homedemo.html" class="plain-button sm-button">Demo page</a></h4>
-                            <img src="IMG/homepage.png" alt="" class="w-100">
-
-                        </div>
-                    </div>
-
-                    <div class="row px-4 my-2">
-                        <div class="col">
-                            <div class="section-heading">
-                                <h3 class="green-text lead-in">Typography</h3>
-                            </div>
-                            <h1>Heading 1</h1>
-                            <div class="CSS-demo">
-                                <button class="CSS-button bi-chevron-down arrow-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#CSS-H1" aria-expanded="false" aria-controls="CSS-H1">
-                                    H1 styles
-                                </button>
-                                <div class="collapse" id="CSS-H1">
-                                    <div class="card card-body">
-                                        <code>
-                                            h1 {<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;font-family: 'Arvo', serif;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;line-height: 1.2em;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;color: #003355;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;font-size:2.25rem;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;font-weight:700;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom:0.2rem;<br>}
-                                        </code>
-                                    </div>
-                                </div>
-                            </div>
-                            <h2>Heading 2</h2>
-                            <div class="CSS-demo">
-                                <button class="CSS-button bi-chevron-down arrow-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#CSS-H2" aria-expanded="false" aria-controls="CSS-H2">
-                                    H2 styles
-                                </button>
-                                <div class="collapse" id="CSS-H2">
-                                    <div class="card card-body">
-                                        <code>
-                                            h2 {<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;font-family: 'Arvo', serif;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;font-weight: 700;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;line-height: 1.2em;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;color: #003355;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;font-size:1.75rem;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom:0.2rem;<br>}
-                                        </code>
-                                    </div>
-                                </div>
-                            </div>
-                            <h3>Heading 3</h3>
-                            <div class="CSS-demo">
-                                <button class="CSS-button bi-chevron-down arrow-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#CSS-H3" aria-expanded="false" aria-controls="CSS-H3">
-                                    H3 styles
-                                </button>
-                                <div class="collapse" id="CSS-H3">
-                                    <div class="card card-body">
-                                        <code>
-                                            h3 {<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;font-family: 'Arvo', serif;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;font-weight: 300;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;line-height: 1.2em;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;color: #003355;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;font-size:1.5rem;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom:0.2rem;<br>}
-                                        </code>
-                                    </div>
-                                </div>
-                            </div>
-                            <h4>Heading 4</h4>
-                            <div class="CSS-demo">
-                                <button class="CSS-button bi-chevron-down arrow-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#CSS-H4" aria-expanded="false" aria-controls="CSS-H4">
-                                    H4 styles
-                                </button>
-                                <div class="collapse" id="CSS-H4">
-                                    <div class="card card-body">
-                                        <code>
-                                            h4 {<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;font-family: 'Arvo', serif;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;font-weight: 300;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;line-height: 1.2em;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;color: #003355;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;font-size:1.25rem;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom:0.2rem;<br>}
-                                        </code>
-                                    </div>
-                                </div>
-                            </div>
-                            <h5>Heading 5</h5>
-                            <div class="CSS-demo">
-                                <button class="CSS-button bi-chevron-down arrow-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#CSS-H5" aria-expanded="false" aria-controls="CSS-H5">
-                                H5 styles
-                                </button>
-                                <div class="collapse" id="CSS-H5">
-                                    <div class="card card-body">
-                                        <code>
-                                            h5 {<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;font-family: 'Ubuntu', sans-serif;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;font-weight: 500;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;line-height: 1.2em;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;color: #003355;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;font-size:1rem;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom:0.2rem;<br>}
-                                        </code>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <p><strong>Paragraph text</strong> – Cillum laborum Lorem labore ullamco commodo deserunt ex Lorem. Elit veniam reprehenderit aute nulla excepteur non excepteur. Aliquip Lorem commodo nulla. In nisi reprehenderit commodo velit et occaecat. Id in voluptate elit enim enim anim occaecat officia.</p>
-                            <div class="CSS-demo">
-                                <button class="CSS-button bi-chevron-down arrow-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#CSS-P" aria-expanded="false" aria-controls="CSS-P">
-                                    P styles
-                                </button>
-                                <div class="collapse" id="CSS-P">
-                                    <div class="card card-body">
-                                        <code>
-                                            p {<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;font-family: 'Ubuntu', sans-serif;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;font-weight: 300;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;line-height: 1.7em;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;font-size:1rem;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom:0.2rem;<br>}
-                                        </code>
-                                    </div>
-                                </div>
-                            </div> 
-
-                            <p class="small-text">
-                                <strong>Small text</strong> – empor commodo sint excepteur adipisicing ad. Esse ex magna ipsum culpa adipisicing consectetur pariatur non ad. Reprehenderit ut qui mollit. Fugiat labore irure exercitation id eu voluptate qui velit dolor amet tempor. Eiusmod culpa mollit eu.
-                            </p>
-                            <div class="CSS-demo">
-                                <button class="CSS-button bi-chevron-down arrow-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#CSS-smallP" aria-expanded="false" aria-controls="CSS-smallP">
-                                    Small text styles
-                                </button>
-                                <div class="collapse" id="CSS-smallP">
-                                    <div class="card card-body">
-                                        <code>
-                                            .small-text {<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;font-size: 0.85rem;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;line-height: 1.4em;<br>}
-                                        </code>
-                                    </div>
-                                </div>
-                            </div> 
-
-                            <h3 class="lead-in">Lead-in heading</h3>
-                            <p><strong>Applies a top margin to element.</strong> Culpa ex dolor velit dolor esse proident sunt nisi eu. Aliqua officia elit reprehenderit laborum et. Eu amet ex sint sint sunt est sunt cupidatat enim ex magna in irure. Proident cillum velit labore. Id do consequat tempor cupidatat ipsum veniam ipsum laborum. Adipisicing in occaecat anim ea.</p>   
-                            <div class="CSS-demo">
-                                <button class="CSS-button bi-chevron-down arrow-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#CSS-leadin" aria-expanded="false" aria-controls="CSS-leadin">
-                                    Lead-in styles
-                                </button>
-                                <div class="collapse" id="CSS-leadin">
-                                    <div class="card card-body">
-                                        <code>
-                                            .lead-in{<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;margin-top:1.5rem;<br>}
-                                        </code>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <figure>
-                                <blockquote class="blockquote">
-                                    <strong>Block quote</strong> – Excepteur aliqua nulla ea enim. Qui velit aute incididunt. Commodo magna enim occaecat duis id cupidatat sunt laboris eu consequat sint enim consequat amet deserunt. 
-                                </blockquote>
-                                <figcaption class="blockquote-footer">
-                                    Author of Quote
-                                </figcaption>
-                            </figure>
-                            <div class="CSS-demo">
-                                <button class="CSS-button bi-chevron-down arrow-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#CSS-blockquote" aria-expanded="false" aria-controls="CSS-blockquote">
-                                    Blockquote styles
-                                </button>
-                                <div class="collapse" id="CSS-blockquote">
-                                    <div class="card card-body">
-                                        <code>
-                                            .blockquote{<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;font-size: 1rem;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;border-left: 0.5rem solid #0077aa;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;padding: 0.5rem;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;background: #e3f5fe;<br>
+                                        <code>  
+                                            .feature-header{<br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;background: white;<br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;display: inline-block;<br>}<br><br>
+                                            .page-feature{<br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;width: 100%;<br>
                                             &nbsp;&nbsp;&nbsp;&nbsp;border-radius: 0.5rem;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;box-sizing: border-box;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;margin: 1.1rem 0;<br>}<br><br>
-                                            .blockquote-footer{<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;font-style: italic;<br>}
+                                            &nbsp;&nbsp;&nbsp;&nbsp;padding: 12rem 1.4rem 1rem 1.4rem;<br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom: 1rem;<br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;background-size: cover!important;<br>}                                           
                                         </code>
                                     </div>
                                 </div>
-                            </div>  
+                            </div>                               
+                            <h1 class="feature-header">Page title</h1>
 
-                            <ul class="list lead-in">
-                                <li><strong>Bulleted list</strong></li>
-                                <li>Consectetur adipiscing elit</li>
-                                <li>Integer molestie lorem at massa</li>
-                                <li>Facilisis in pretium nisl aliquet</li>
-                                <li>Nulla volutpat aliquam velit
-                                </li>
+                        </div>
+                    </div>
+                </div>
+                <div class="row px-4 my-2">
+                    <div class="col">
+                        <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">Previous page</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Current page</li>
+                            </ol>
+                        </nav>
+                        <div class="CSS-demo">
+                            <button class="CSS-button bi-chevron-down arrow-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#CSS-breadcrumbs" aria-expanded="false" aria-controls="CSS-breadcrumbs">
+                                Breadcrumb styles
+                            </button>
+                            <div class="collapse" id="CSS-breadcrumbs">
+                                <div class="card card-body">
+                                    <code>
+                                        .breadcrumb{<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;font-size:0.8rem;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom:0.5rem;<br>}<br><br>
+                                        .breadcrumb a{<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;color:#0077aa;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;font-weight: 700;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;text-decoration: none;<br>}                                       
+                                    </code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row px-4 my-2">
+                    <div class="col">
+                        <div class="section-heading">
+                            <h3 class="green-text">Overview</h3>
+                        </div>
+                        <p>This template is built using Bootstrap 5.2.3 CSS and JS, along with custom CSS for enhanced styling. It serves as a design guide for the new website, providing a visual direction and theme. Developers should adapt and optimize the template as needed to ensure it's fit for purpose, user-friendly, and compatible across devices and platforms.</p>
+                    </div>
+                </div>
+
+                <div class="row px-4 my-2">
+                    <div class="col">
+                        <div class="section-heading lead-in">
+                            <h3 class="green-text">Spacing</h3>
+                        </div>
+                        <h4>Sidebar and content-page spacing</h4>
+                        <img src="IMG/spacing.png" alt="" class="w-100">
+
+                        <h4 class="lead-in">Homepage/ pages without sidebar &nbsp;&nbsp;&nbsp;<a href="homedemo.html" class="plain-button sm-button">Demo page</a></h4>
+                        <img src="IMG/homepage.png" alt="" class="w-100">
+
+                    </div>
+                </div>
+
+                <div class="row px-4 my-2">
+                    <div class="col">
+                        <div class="section-heading">
+                            <h3 class="green-text lead-in">Typography</h3>
+                        </div>
+                        <h1>Heading 1</h1>
+                        <div class="CSS-demo">
+                            <button class="CSS-button bi-chevron-down arrow-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#CSS-H1" aria-expanded="false" aria-controls="CSS-H1">
+                                H1 styles
+                            </button>
+                            <div class="collapse" id="CSS-H1">
+                                <div class="card card-body">
+                                    <code>
+                                        h1 {<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;font-family: 'Arvo', serif;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;line-height: 1.2em;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;color: #003355;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;font-size:2.25rem;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;font-weight:700;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom:0.2rem;<br>}
+                                    </code>
+                                </div>
+                            </div>
+                        </div>
+                        <h2>Heading 2</h2>
+                        <div class="CSS-demo">
+                            <button class="CSS-button bi-chevron-down arrow-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#CSS-H2" aria-expanded="false" aria-controls="CSS-H2">
+                                H2 styles
+                            </button>
+                            <div class="collapse" id="CSS-H2">
+                                <div class="card card-body">
+                                    <code>
+                                        h2 {<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;font-family: 'Arvo', serif;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;font-weight: 700;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;line-height: 1.2em;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;color: #003355;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;font-size:1.75rem;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom:0.2rem;<br>}
+                                    </code>
+                                </div>
+                            </div>
+                        </div>
+                        <h3>Heading 3</h3>
+                        <div class="CSS-demo">
+                            <button class="CSS-button bi-chevron-down arrow-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#CSS-H3" aria-expanded="false" aria-controls="CSS-H3">
+                                H3 styles
+                            </button>
+                            <div class="collapse" id="CSS-H3">
+                                <div class="card card-body">
+                                    <code>
+                                        h3 {<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;font-family: 'Arvo', serif;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;font-weight: 300;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;line-height: 1.2em;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;color: #003355;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;font-size:1.5rem;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom:0.2rem;<br>}
+                                    </code>
+                                </div>
+                            </div>
+                        </div>
+                        <h4>Heading 4</h4>
+                        <div class="CSS-demo">
+                            <button class="CSS-button bi-chevron-down arrow-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#CSS-H4" aria-expanded="false" aria-controls="CSS-H4">
+                                H4 styles
+                            </button>
+                            <div class="collapse" id="CSS-H4">
+                                <div class="card card-body">
+                                    <code>
+                                        h4 {<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;font-family: 'Arvo', serif;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;font-weight: 300;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;line-height: 1.2em;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;color: #003355;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;font-size:1.25rem;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom:0.2rem;<br>}
+                                    </code>
+                                </div>
+                            </div>
+                        </div>
+                        <h5>Heading 5</h5>
+                        <div class="CSS-demo">
+                            <button class="CSS-button bi-chevron-down arrow-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#CSS-H5" aria-expanded="false" aria-controls="CSS-H5">
+                                H5 styles
+                            </button>
+                            <div class="collapse" id="CSS-H5">
+                                <div class="card card-body">
+                                    <code>
+                                        h5 {<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;font-family: 'Ubuntu', sans-serif;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;font-weight: 500;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;line-height: 1.2em;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;color: #003355;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;font-size:1rem;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom:0.2rem;<br>}
+                                    </code>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p><strong>Paragraph text</strong> – Cillum laborum Lorem labore ullamco commodo deserunt ex Lorem. Elit veniam reprehenderit aute nulla excepteur non excepteur. Aliquip Lorem commodo nulla. In nisi reprehenderit commodo velit et occaecat. Id in voluptate elit enim enim anim occaecat officia.</p>
+                        <div class="CSS-demo">
+                            <button class="CSS-button bi-chevron-down arrow-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#CSS-P" aria-expanded="false" aria-controls="CSS-P">
+                                P styles
+                            </button>
+                            <div class="collapse" id="CSS-P">
+                                <div class="card card-body">
+                                    <code>
+                                        p {<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;font-family: 'Ubuntu', sans-serif;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;font-weight: 300;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;line-height: 1.7em;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;font-size:1rem;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom:0.2rem;<br>}
+                                    </code>
+                                </div>
+                            </div>
+                        </div> 
+
+                        <p class="small-text">
+                            <strong>Small text</strong> – empor commodo sint excepteur adipisicing ad. Esse ex magna ipsum culpa adipisicing consectetur pariatur non ad. Reprehenderit ut qui mollit. Fugiat labore irure exercitation id eu voluptate qui velit dolor amet tempor. Eiusmod culpa mollit eu.
+                        </p>
+                        <div class="CSS-demo">
+                            <button class="CSS-button bi-chevron-down arrow-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#CSS-smallP" aria-expanded="false" aria-controls="CSS-smallP">
+                                Small text styles
+                            </button>
+                            <div class="collapse" id="CSS-smallP">
+                                <div class="card card-body">
+                                    <code>
+                                        .small-text {<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;font-size: 0.85rem;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;line-height: 1.4em;<br>}
+                                    </code>
+                                </div>
+                            </div>
+                        </div> 
+
+                        <h3 class="lead-in">Lead-in heading</h3>
+                        <p><strong>Applies a top margin to element.</strong> Culpa ex dolor velit dolor esse proident sunt nisi eu. Aliqua officia elit reprehenderit laborum et. Eu amet ex sint sint sunt est sunt cupidatat enim ex magna in irure. Proident cillum velit labore. Id do consequat tempor cupidatat ipsum veniam ipsum laborum. Adipisicing in occaecat anim ea.</p>   
+                        <div class="CSS-demo">
+                            <button class="CSS-button bi-chevron-down arrow-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#CSS-leadin" aria-expanded="false" aria-controls="CSS-leadin">
+                                Lead-in styles
+                            </button>
+                            <div class="collapse" id="CSS-leadin">
+                                <div class="card card-body">
+                                    <code>
+                                        .lead-in{<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;margin-top:1.5rem;<br>}
+                                    </code>
+                                </div>
+                            </div>
+                        </div>
+
+                        <figure>
+                            <blockquote class="blockquote">
+                                <strong>Block quote</strong> – Excepteur aliqua nulla ea enim. Qui velit aute incididunt. Commodo magna enim occaecat duis id cupidatat sunt laboris eu consequat sint enim consequat amet deserunt. 
+                            </blockquote>
+                            <figcaption class="blockquote-footer">
+                                Author of Quote
+                            </figcaption>
+                        </figure>
+                        <div class="CSS-demo">
+                            <button class="CSS-button bi-chevron-down arrow-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#CSS-blockquote" aria-expanded="false" aria-controls="CSS-blockquote">
+                                Blockquote styles
+                            </button>
+                            <div class="collapse" id="CSS-blockquote">
+                                <div class="card card-body">
+                                    <code>
+                                        .blockquote{<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;font-size: 1rem;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;border-left: 0.5rem solid #0077aa;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;padding: 0.5rem;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;background: #e3f5fe;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;border-radius: 0.5rem;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;box-sizing: border-box;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;margin: 1.1rem 0;<br>}<br><br>
+                                        .blockquote-footer{<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;font-style: italic;<br>}
+                                    </code>
+                                </div>
+                            </div>
+                        </div>  
+
+                        <ul class="list lead-in">
+                            <li><strong>Bulleted list</strong></li>
+                            <li>Consectetur adipiscing elit</li>
+                            <li>Integer molestie lorem at massa</li>
+                            <li>Facilisis in pretium nisl aliquet</li>
+                            <li>Nulla volutpat aliquam velit
+                            </li>
+                            <li>Faucibus porta lacus fringilla vel</li>
+                            <li>Aenean sit amet erat nunc</li>
+                            <li>Eget porttitor lorem</li>
+                            <ul>
                                 <li>Faucibus porta lacus fringilla vel</li>
                                 <li>Aenean sit amet erat nunc</li>
                                 <li>Eget porttitor lorem</li>
-                                <ul>
-                                    <li>Faucibus porta lacus fringilla vel</li>
-                                    <li>Aenean sit amet erat nunc</li>
-                                    <li>Eget porttitor lorem</li>
-                                </ul>
-
                             </ul>
 
-                            <ol class="list lead-in">
-                                <li><strong>Numbered list</strong></li>
-                                <li>Consectetur adipiscing elit</li>
-                                <li>Integer molestie lorem at massa</li>
-                                <li>Facilisis in pretium nisl aliquet</li>
-                                <li>Nulla volutpat aliquam velit
-                                </li>
+                        </ul>
+
+                        <ol class="list lead-in">
+                            <li><strong>Numbered list</strong></li>
+                            <li>Consectetur adipiscing elit</li>
+                            <li>Integer molestie lorem at massa</li>
+                            <li>Facilisis in pretium nisl aliquet</li>
+                            <li>Nulla volutpat aliquam velit
+                            </li>
+                            <li>Faucibus porta lacus fringilla vel</li>
+                            <li>Aenean sit amet erat nunc</li>
+                            <li>Eget porttitor lorem</li>
+                            <ol>
                                 <li>Faucibus porta lacus fringilla vel</li>
                                 <li>Aenean sit amet erat nunc</li>
                                 <li>Eget porttitor lorem</li>
-                                <ol>
-                                    <li>Faucibus porta lacus fringilla vel</li>
-                                    <li>Aenean sit amet erat nunc</li>
-                                    <li>Eget porttitor lorem</li>
-                                </ol>
                             </ol>
-                            <div class="CSS-demo">
-                                <button class="CSS-button bi-chevron-down arrow-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#CSS-list" aria-expanded="false" aria-controls="CSS-list">
-                                    List styles
-                                </button>
-                                <div class="collapse" id="CSS-list">
-                                    <div class="card card-body">
-                                        <code>
-                                            .list li {<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;padding-left: 0.25rem;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom: 0.5rem;<br>}<br><br>
+                        </ol>
+                        <div class="CSS-demo">
+                            <button class="CSS-button bi-chevron-down arrow-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#CSS-list" aria-expanded="false" aria-controls="CSS-list">
+                                List styles
+                            </button>
+                            <div class="collapse" id="CSS-list">
+                                <div class="card card-body">
+                                    <code>
+                                        .list li {<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;padding-left: 0.25rem;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom: 0.5rem;<br>}<br><br>
 
-                                            .list {<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;padding-left: 1rem;<br>}
-                                        </code>
+                                        .list {<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;padding-left: 1rem;<br>}
+                                    </code>
+                                </div>
+                            </div>
+                        </div>  
+
+                    </div>
+                </div>
+                <div class="row px-4 my-2">
+                    <div class="col">
+                        <div class="row">
+                            <div class="col">
+                                <div class="section-heading">
+                                    <h3 class="green-text lead-in">Colours</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 my-1">
+                                <div style="background:#003355;color:white; border-radius:5px; padding:10px;" class="h-100">
+                                    <h3 style="color:white;">#003355</h3>
+                                    <p style="color:white;">Headings</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 my-1">
+                                <div style="background:#01626b;color:white; border-radius:5px; padding:10px;" class="h-100">
+                                    <h3 style="color:white;">#01626b</h3>
+                                    <p style="color:white;">Headings (.green-text)</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 my-1">
+                                <div style="background:#0077aa;color:white; border-radius:5px; padding:10px;" class="h-100">
+                                    <h3 style="color:white;">#0077aa</h3>
+                                    <p style="color:white;">Buttons and links</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 my-1">
+                                <div style="background:#c3ebfa; border-radius:5px; padding:10px;" class="h-100">
+                                    <h3>#c3ebfa</h3>
+                                    <p>Body background</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 my-1">
+                                <div style="background:#E6F3FB; border-radius:5px; padding:10px;" class="h-100">
+                                    <h3>#E6F3FB</h3>
+                                    <p>Light background(.l-bg)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row px-4 my-2">
+                    <div class="col">
+                        <div class="section-heading">
+                            <h3 class="green-text lead-in">Buttons</h3>
+                        </div>
+                        <a href="" class="plain-button lg-button">Large plain text button</a> <br> 
+                        <a href="" class="plain-button sm-button my-2">Small plain text button</a> <br>
+
+                        <div class="CSS-demo">
+                            <button class="CSS-button bi-chevron-down arrow-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#CSS-plain" aria-expanded="false" aria-controls="CSS-plain">
+                                Plain text button styles
+                            </button>
+                            <div class="collapse" id="CSS-plain">
+                                <div class="card card-body">
+                                    <code>
+                                        .plain-button{<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;color: #0077aa;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;box-sizing: border-box;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;display: inline-block;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;text-decoration: none;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;border-bottom: 0.15em solid rgba(260, 260, 260,0);<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;transition: 0.2s;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;line-height:1.3em;<br>}<br><br>
+
+                                        /* Animation and arrow icon */<br><br>
+                                        plain-button:hover {<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;border-bottom: 0.15em solid #0077aa;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;transition: 0.2s;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;padding-left: 0.15rem;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;transition: 0.1s;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;text-decoration: none;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;color: #0077aa;<br>}<br><br>
+                                        .plain-button:hover::after {<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;transition: 0.2s;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;content: '›››';<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;animation: arrowSwap 0.15s;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;text-decoration: none;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;opacity:1;<br>}<br><br>
+                                        .plain-button::after {<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;content: '›';<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;margin-left: 0.25em;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;text-decoration: none;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;transition:0.2s;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;opacity:0.8;<br>}<br><br>
+                                        @keyframes arrowSwap{<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;from {<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content: '›';<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opacity:0.5;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;50%{<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content: '››';<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;to {<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content: '›››';<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opacity:1;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;}<br>}<br><br>
+                                        /* Shared classes */<br><br>
+                                        .lg-button{<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;font-size: 1.2rem;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;font-weight: 700;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;margin-top: 1rem;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom:1rem;<br>}<br><br>
+                                        .sm-button{<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;font-size:1rem;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;font-weight:500;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;margin-top: 1rem;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom:1rem;<br>}
+                                    </code>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <a href="" class="bg-button lg-button">Large background button</a> <br>
+                        <a href="" class="bg-button sm-button my-2">Small background button</a> <br>
+                        <div class="CSS-demo">
+                            <button class="CSS-button bi-chevron-down arrow-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#CSS-bg" aria-expanded="false" aria-controls="CSS-bg">
+                                Background button styles
+                            </button>
+                            <div class="collapse" id="CSS-bg">
+                                <div class="card card-body">
+                                    <code>
+                                        .bg-button {<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;background: #0077aa;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;color:white;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;box-sizing: border-box;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;display: inline-block;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;text-decoration: none;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;padding:0.6rem 1.2rem 0.6rem 1.2rem;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;border-radius:0.25rem;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;transition: 0.2s;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;line-height:1.3em;<br>}<br><br>
+                                        .bg-button:hover{<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;color:white;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;padding:0.6rem 1.5rem 0.6rem 0.9rem;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;text-decoration: none;<br>}<br><br>
+                                        .bg-button:hover::after{<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;content: '›';<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;position:absolute;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;margin-left:0.25em;<br>}<br><br>
+                                        /* Shared classes */<br><br>
+                                        .lg-button{<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;font-size: 1.2rem;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;font-weight: 700;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;margin-top: 1rem;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom:1rem;<br>}<br><br>
+                                        .sm-button{<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;font-size:1rem;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;font-weight:500;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;margin-top: 1rem;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom:1rem;<br>}
+                                    </code>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="my-2">In-line <a class="inline-button">link</a> with text.</p>
+                        <div class="CSS-demo">
+                            <button class="CSS-button bi-chevron-down arrow-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#CSS-inline" aria-expanded="false" aria-controls="CSS-inline">
+                                In-line button styles
+                            </button>
+                            <div class="collapse" id="CSS-inline">
+                                <div class="card card-body">
+                                    <code>
+                                        .inline-button{<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;color:#0077aa!important;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;cursor:pointer;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;font-weight:400;<br>}<br><br>
+                                        .inline-button:hover{<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;color:#003355!important;<br>}<br>
+                                    </code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row px-4 my-2">
+                    <div class="col">
+                        <div class="section-heading">
+                            <h3 class="green-text lead-in">Content layouts</h3>
+                        </div>
+                        <div class="row my-3">
+                            <div class="col-lg-6 my-3">
+                                <div class="content-box">
+                                    <div class="content-box-image cbi-lg" style="background:url('https://picsum.photos/seed/1681423575888/400/300');">
                                     </div>
+                                    <div class="content-box-text">
+                                        <h4>Laborum aliqua officia excepteur.</h4>
+                                        <p class="small-text">Labore proident sint officia eiusmod ea. Id nulla nisi laboris. Tempor commodo Lorem dolore sunt veniam eu. Lorem velit eiusmod sit ipsum consequat sunt laborum quis eu et magna mollit ad nostrud duis. Adipisicing sunt magna elit nulla anim nulla id fugiat voluptate laboris amet labore. Veniam aute proident est in qui. </p>
+                                    </div>
+                                    <div class="content-box-button">
+                                        <a href="" class="plain-button sm-button">Plain text button</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 my-3">
+                                <div class="content-box">
+                                    <div class="content-box-image cbi-lg" style="background:url('https://picsum.photos/seed/1681423547456/400/300');">
+                                    </div>
+                                    <div class="content-box-text m-auto">
+                                        <h4>Tempor id reprehenderit sit quis aute occaecat ullamco.</h4>
+                                        <p class="small-text">Commodo irure culpa officia commodo elit adipisicing veniam do in dolore incididunt. Commodo irure eiusmod fugiat tempor ad et in commodo aliqua proident aliqua. Minim eu dolor nulla dolore.</p>
+                                    </div>
+                                    <div class="content-box-button">
+                                        <a href="" class="plain-button sm-button">Plain text button</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row my-0">
+                            <div class="col-lg-4 my-3">
+                                <div class="content-box">
+                                    <div class="content-box-image cbi-sm" style="background:url('https://picsum.photos/seed/1254345345/400/300');">
+                                    </div>
+                                    <div class="content-box-text m-auto">
+                                        <h5>Exercitation eu elit consequat ea</h5>
+                                        <p class="small-text">Aliquip labore magna id aute laborum eiusmod ex.</p>
+                                    </div>
+                                    <div class="content-box-button">
+                                        <a href="" class="plain-button sm-button">Bottom aligned button</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 my-3">
+                                <div class="content-box">
+                                    <div class="content-box-image cbi-sm" style="background:url('https://picsum.photos/seed/543578223/400/300');">
+                                    </div>
+                                    <div class="content-box-text m-auto">
+                                        <h5>Tempor id reprehenderit sit quis aute occaecat ullamco.</h5>
+                                        <p class="small-text">Pariatur minim commodo incididunt culpa nostrud duis labore nisi sit consectetur eiusmod ex.</p>
+                                    </div>
+                                    <div class="content-box-button">
+                                        <a href="" class="plain-button sm-button">Bottom aligned button</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 my-3">
+                                <div class="content-box">
+                                    <div class="content-box-image cbi-sm" style="background:url('https://picsum.photos/seed/39019245/400/300');">
+                                    </div>
+                                    <div class="content-box-text m-auto">
+                                        <h5>Duis ipsum exercitation ullamco.</h5>
+                                        <p class="small-text">Occaecat in minim cupidatat. Ullamco laborum eiusmod ad irure qui pariatur do ipsum esse.</p>
+                                    </div>
+                                    <div class="content-box-button">
+                                        <a href="" class="plain-button sm-button">Bottom aligned button</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="CSS-demo">
+                            <button class="CSS-button bi-chevron-down arrow-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#CSS-layouts" aria-expanded="false" aria-controls="CSS-layouts">
+                                Content layout styles
+                            </button>
+                            <div class="collapse" id="CSS-layouts">
+                                <div class="card card-body">
+                                    <code>
+                                        .content-box{<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;border-radius: 0.25em;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;overflow: hidden!important;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;height: 100%;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;position: relative;<br>}<br><br>
+
+                                        .content-box-image{<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;background-size: cover!important;<br>}<br><br>
+
+                                        .cbi-sm{<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;height: 10rem;<br>}<br><br>
+
+                                        .cbi-lg{<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;height: 11rem;<br>}<br><br>
+
+                                        .content-box-text{<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;padding: 1rem 0 3.2rem 0;<br>}<br><br>
+
+                                        /* Bottom aligned button */<br><br>    
+
+                                        .content-box-button{<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;padding: 0 0 0.5rem 0;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;position: absolute;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;bottom: 0;<br>}<br><br>                                   
+                                    </code>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row px-4 py-4 my-2">
+                    <div class="col">
+                        <div class="section-heading">
+                            <h3 class="green-text lead-in">Accordion</h3>
+                        </div>
+                        <div class="container-fluid p-0">
+                            <div class="row px-0">
+                                <div class="col p-0">
+                                    <div class="accordion" id="accordionExample">
+                                        <div class="accordion-item">
+                                            <p class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                                    Eu incididunt ullamco ullamco nisi magna nisi qui pariatur deserunt velit.
+                                                </button>
+                                            </p>
+                                            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                                <div class="accordion-body">
+                                                    Elit amet qui adipisicing nulla excepteur adipisicing laboris tempor commodo dolor tempor. Elit est in aliquip consequat pariatur dolor irure ad. In adipisicing anim labore incididunt veniam est enim sint ut excepteur sint adipisicing. Non excepteur enim pariatur. Minim ea minim irure aute et fugiat. Excepteur adipisicing magna elit laboris ad culpa occaecat ea consequat culpa. Sint quis et est id consectetur eu incididunt quis ullamco. Reprehenderit ipsum eu eiusmod culpa cillum deserunt.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <p class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                    Labore labore laborum deserunt elit adipisicing labore reprehenderit.
+                                                </button>
+                                            </p>
+                                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                                <div class="accordion-body">
+                                                    Elit amet qui adipisicing nulla excepteur adipisicing laboris tempor commodo dolor tempor. Elit est in aliquip consequat pariatur dolor irure ad. In adipisicing anim labore incididunt veniam est enim sint ut excepteur sint adipisicing. Non excepteur enim pariatur. Minim ea minim irure aute et fugiat. Excepteur adipisicing magna elit laboris ad culpa occaecat ea consequat culpa. Sint quis et est id consectetur eu incididunt quis ullamco. Reprehenderit ipsum eu eiusmod culpa cillum deserunt.
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
                                 </div>
                             </div>  
-
                         </div>
-                    </div>
-                    <div class="row px-4 my-2">
-                        <div class="col">
-                            <div class="row">
-                                <div class="col">
-                                    <div class="section-heading">
-                                        <h3 class="green-text lead-in">Colours</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-4 my-1">
-                                    <div style="background:#003355;color:white; border-radius:5px; padding:10px;" class="h-100">
-                                        <h3 style="color:white;">#003355</h3>
-                                        <p style="color:white;">Headings</p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 my-1">
-                                    <div style="background:#01626b;color:white; border-radius:5px; padding:10px;" class="h-100">
-                                        <h3 style="color:white;">#01626b</h3>
-                                        <p style="color:white;">Headings (.green-text)</p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 my-1">
-                                    <div style="background:#0077aa;color:white; border-radius:5px; padding:10px;" class="h-100">
-                                        <h3 style="color:white;">#0077aa</h3>
-                                        <p style="color:white;">Buttons and links</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-4 my-1">
-                                    <div style="background:#c3ebfa; border-radius:5px; padding:10px;" class="h-100">
-                                        <h3>#c3ebfa</h3>
-                                        <p>Body background</p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 my-1">
-                                    <div style="background:#E6F3FB; border-radius:5px; padding:10px;" class="h-100">
-                                        <h3>#E6F3FB</h3>
-                                        <p>Light background(.l-bg)</p>
-                                    </div>
+                        <div class="CSS-demo">
+                            <button class="CSS-button bi-chevron-down arrow-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#CSS-accordion" aria-expanded="false" aria-controls="CSS-accordion">
+                                Accordion styles
+                            </button>
+                            <div class="collapse" id="CSS-accordion">
+                                <div class="card card-body">
+                                    <code> 
+                                        .accordion{<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;padding: 0;<br>}<br><br>
+                                        .accordion-item{<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;margin: 0.5rem;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;border: none;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;height: 100%;<br>}<br><br>
+                                        .accordion-item button{<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;padding: 0.5rem;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;background: #E6F3FB;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;border-radius: 0.25rem!important;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;font-size: 1rem!important;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;font-family: 'Arvo', serif;<br>}<br><br>
+                                        .accordion-item button:focus{<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;outline: none !important;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;box-shadow: none!important;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;color: inherit!important;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;background: #E6F3FB;<br>}<br>
+
+                                    </code>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="row px-4 my-2">
-                        <div class="col">
-                            <div class="section-heading">
-                                <h3 class="green-text lead-in">Buttons</h3>
-                            </div>
-                            <a href="" class="plain-button lg-button">Large plain text button</a> <br> 
-                            <a href="" class="plain-button sm-button my-2">Small plain text button</a> <br>
-
-                            <div class="CSS-demo">
-                                <button class="CSS-button bi-chevron-down arrow-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#CSS-plain" aria-expanded="false" aria-controls="CSS-plain">
-                                    Plain text button styles
-                                </button>
-                                <div class="collapse" id="CSS-plain">
-                                    <div class="card card-body">
-                                        <code>
-                                            .plain-button{<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;color: #0077aa;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;box-sizing: border-box;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;display: inline-block;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;text-decoration: none;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;border-bottom: 0.15em solid rgba(260, 260, 260,0);<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;transition: 0.2s;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;line-height:1.3em;<br>}<br><br>
-
-                                            /* Animation and arrow icon */<br><br>
-                                            plain-button:hover {<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;border-bottom: 0.15em solid #0077aa;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;transition: 0.2s;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;padding-left: 0.15rem;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;transition: 0.1s;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;text-decoration: none;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;color: #0077aa;<br>}<br><br>
-                                            .plain-button:hover::after {<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;transition: 0.2s;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;content: '›››';<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;animation: arrowSwap 0.15s;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;text-decoration: none;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;opacity:1;<br>}<br><br>
-                                            .plain-button::after {<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;content: '›';<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;margin-left: 0.25em;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;text-decoration: none;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;transition:0.2s;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;opacity:0.8;<br>}<br><br>
-                                            @keyframes arrowSwap{<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;from {<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content: '›';<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opacity:0.5;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;50%{<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content: '››';<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;to {<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content: '›››';<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opacity:1;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;}<br>}<br><br>
-                                            /* Shared classes */<br><br>
-                                            .lg-button{<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;font-size: 1.2rem;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;font-weight: 700;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;margin-top: 1rem;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom:1rem;<br>}<br><br>
-                                            .sm-button{<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;font-size:1rem;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;font-weight:500;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;margin-top: 1rem;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom:1rem;<br>}
-                                        </code>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <a href="" class="bg-button lg-button">Large background button</a> <br>
-                            <a href="" class="bg-button sm-button my-2">Small background button</a> <br>
-                            <div class="CSS-demo">
-                                <button class="CSS-button bi-chevron-down arrow-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#CSS-bg" aria-expanded="false" aria-controls="CSS-bg">
-                                    Background button styles
-                                </button>
-                                <div class="collapse" id="CSS-bg">
-                                    <div class="card card-body">
-                                        <code>
-                                            .bg-button {<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;background: #0077aa;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;color:white;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;box-sizing: border-box;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;display: inline-block;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;text-decoration: none;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;padding:0.6rem 1.2rem 0.6rem 1.2rem;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;border-radius:0.25rem;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;transition: 0.2s;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;line-height:1.3em;<br>}<br><br>
-                                            .bg-button:hover{<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;color:white;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;padding:0.6rem 1.5rem 0.6rem 0.9rem;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;text-decoration: none;<br>}<br><br>
-                                            .bg-button:hover::after{<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;content: '›';<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;position:absolute;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;margin-left:0.25em;<br>}<br><br>
-                                            /* Shared classes */<br><br>
-                                            .lg-button{<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;font-size: 1.2rem;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;font-weight: 700;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;margin-top: 1rem;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom:1rem;<br>}<br><br>
-                                            .sm-button{<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;font-size:1rem;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;font-weight:500;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;margin-top: 1rem;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom:1rem;<br>}
-                                        </code>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <p class="my-2">In-line <a class="inline-button">link</a> with text.</p>
-                            <div class="CSS-demo">
-                                <button class="CSS-button bi-chevron-down arrow-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#CSS-inline" aria-expanded="false" aria-controls="CSS-inline">
-                                    In-line button styles
-                                </button>
-                                <div class="collapse" id="CSS-inline">
-                                    <div class="card card-body">
-                                        <code>
-                                            .inline-button{<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;color:#0077aa!important;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;cursor:pointer;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;font-weight:400;<br>}<br><br>
-                                            .inline-button:hover{<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;color:#003355!important;<br>}<br>
-                                        </code>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row px-4 my-2">
-                        <div class="col">
-                            <div class="section-heading">
-                                <h3 class="green-text lead-in">Content layouts</h3>
-                            </div>
-                            <div class="row my-3">
-                                <div class="col-lg-6 my-3">
-                                    <div class="content-box">
-                                        <div class="content-box-image cbi-lg" style="background:url('https://picsum.photos/seed/1681423575888/400/300');">
-                                        </div>
-                                        <div class="content-box-text">
-                                            <h4>Laborum aliqua officia excepteur.</h4>
-                                            <p class="small-text">Labore proident sint officia eiusmod ea. Id nulla nisi laboris. Tempor commodo Lorem dolore sunt veniam eu. Lorem velit eiusmod sit ipsum consequat sunt laborum quis eu et magna mollit ad nostrud duis. Adipisicing sunt magna elit nulla anim nulla id fugiat voluptate laboris amet labore. Veniam aute proident est in qui. </p>
-                                        </div>
-                                        <div class="content-box-button">
-                                            <a href="" class="plain-button sm-button">Plain text button</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 my-3">
-                                    <div class="content-box">
-                                        <div class="content-box-image cbi-lg" style="background:url('https://picsum.photos/seed/1681423547456/400/300');">
-                                        </div>
-                                        <div class="content-box-text m-auto">
-                                            <h4>Tempor id reprehenderit sit quis aute occaecat ullamco.</h4>
-                                            <p class="small-text">Commodo irure culpa officia commodo elit adipisicing veniam do in dolore incididunt. Commodo irure eiusmod fugiat tempor ad et in commodo aliqua proident aliqua. Minim eu dolor nulla dolore.</p>
-                                        </div>
-                                        <div class="content-box-button">
-                                            <a href="" class="plain-button sm-button">Plain text button</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row my-0">
-                                <div class="col-lg-4 my-3">
-                                    <div class="content-box">
-                                        <div class="content-box-image cbi-sm" style="background:url('https://picsum.photos/seed/1254345345/400/300');">
-                                        </div>
-                                        <div class="content-box-text m-auto">
-                                            <h5>Exercitation eu elit consequat ea</h5>
-                                            <p class="small-text">Aliquip labore magna id aute laborum eiusmod ex.</p>
-                                        </div>
-                                        <div class="content-box-button">
-                                            <a href="" class="plain-button sm-button">Bottom aligned button</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 my-3">
-                                    <div class="content-box">
-                                        <div class="content-box-image cbi-sm" style="background:url('https://picsum.photos/seed/543578223/400/300');">
-                                        </div>
-                                        <div class="content-box-text m-auto">
-                                            <h5>Tempor id reprehenderit sit quis aute occaecat ullamco.</h5>
-                                            <p class="small-text">Pariatur minim commodo incididunt culpa nostrud duis labore nisi sit consectetur eiusmod ex.</p>
-                                        </div>
-                                        <div class="content-box-button">
-                                            <a href="" class="plain-button sm-button">Bottom aligned button</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 my-3">
-                                    <div class="content-box">
-                                        <div class="content-box-image cbi-sm" style="background:url('https://picsum.photos/seed/39019245/400/300');">
-                                        </div>
-                                        <div class="content-box-text m-auto">
-                                            <h5>Duis ipsum exercitation ullamco.</h5>
-                                            <p class="small-text">Occaecat in minim cupidatat. Ullamco laborum eiusmod ad irure qui pariatur do ipsum esse.</p>
-                                        </div>
-                                        <div class="content-box-button">
-                                            <a href="" class="plain-button sm-button">Bottom aligned button</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="CSS-demo">
-                                <button class="CSS-button bi-chevron-down arrow-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#CSS-layouts" aria-expanded="false" aria-controls="CSS-layouts">
-                                    Content layout styles
-                                </button>
-                                <div class="collapse" id="CSS-layouts">
-                                    <div class="card card-body">
-                                        <code>
-                                            .content-box{<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;border-radius: 0.25em;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;overflow: hidden!important;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;height: 100%;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;position: relative;<br>}<br><br>
-
-                                            .content-box-image{<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;background-size: cover!important;<br>}<br><br>
-
-                                            .cbi-sm{<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;height: 10rem;<br>}<br><br>
-
-                                            .cbi-lg{<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;height: 11rem;<br>}<br><br>
-
-                                            .content-box-text{<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;padding: 1rem 0 3.2rem 0;<br>}<br><br>
-
-                                            /* Bottom aligned button */<br><br>    
-
-                                            .content-box-button{<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;padding: 0 0 0.5rem 0;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;position: absolute;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;bottom: 0;<br>}<br><br>                                   
-                                        </code>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="row px-4 py-4 my-2">
-                        <div class="col">
-                            <div class="section-heading">
-                                <h3 class="green-text lead-in">Accordion</h3>
-                            </div>
-                            <div class="container-fluid p-0">
-                                <div class="row px-0">
-                                    <div class="col p-0">
-                                        <div class="accordion" id="accordionExample">
-                                            <div class="accordion-item">
-                                                <p class="accordion-header">
-                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                                        Eu incididunt ullamco ullamco nisi magna nisi qui pariatur deserunt velit.
-                                                    </button>
-                                                </p>
-                                                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                                    <div class="accordion-body">
-                                                        Elit amet qui adipisicing nulla excepteur adipisicing laboris tempor commodo dolor tempor. Elit est in aliquip consequat pariatur dolor irure ad. In adipisicing anim labore incididunt veniam est enim sint ut excepteur sint adipisicing. Non excepteur enim pariatur. Minim ea minim irure aute et fugiat. Excepteur adipisicing magna elit laboris ad culpa occaecat ea consequat culpa. Sint quis et est id consectetur eu incididunt quis ullamco. Reprehenderit ipsum eu eiusmod culpa cillum deserunt.
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="accordion-item">
-                                                <p class="accordion-header">
-                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                        Labore labore laborum deserunt elit adipisicing labore reprehenderit.
-                                                    </button>
-                                                </p>
-                                                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                                    <div class="accordion-body">
-                                                        Elit amet qui adipisicing nulla excepteur adipisicing laboris tempor commodo dolor tempor. Elit est in aliquip consequat pariatur dolor irure ad. In adipisicing anim labore incididunt veniam est enim sint ut excepteur sint adipisicing. Non excepteur enim pariatur. Minim ea minim irure aute et fugiat. Excepteur adipisicing magna elit laboris ad culpa occaecat ea consequat culpa. Sint quis et est id consectetur eu incididunt quis ullamco. Reprehenderit ipsum eu eiusmod culpa cillum deserunt.
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                        </div>
-
-                                    </div>
-                                </div>  
-                            </div>
-                            <div class="CSS-demo">
-                                <button class="CSS-button bi-chevron-down arrow-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#CSS-accordion" aria-expanded="false" aria-controls="CSS-accordion">
-                                    Accordion styles
-                                </button>
-                                <div class="collapse" id="CSS-accordion">
-                                    <div class="card card-body">
-                                        <code> 
-                                            .accordion{<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;padding: 0;<br>}<br><br>
-                                            .accordion-item{<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;margin: 0.5rem;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;border: none;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;height: 100%;<br>}<br><br>
-                                            .accordion-item button{<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;padding: 0.5rem;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;background: #E6F3FB;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;border-radius: 0.25rem!important;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;font-size: 1rem!important;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;font-family: 'Arvo', serif;<br>}<br><br>
-                                            .accordion-item button:focus{<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;outline: none !important;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;box-shadow: none!important;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;color: inherit!important;<br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;background: #E6F3FB;<br>}<br>
-
-                                        </code>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 
-    <div class="container-fluid footer p-4">
-        <div class="container-fluid p-4" style="max-width:1300px;">
-            <div class="row">
-                <div class="col-lg-3 px-4">
-                    <img src="IMG/nzva_w.png" style="width:100%;">
+<div class="container-fluid footer p-4">
+    <div class="container-fluid p-4" style="max-width:1300px;">
+        <div class="row">
+            <div class="col-lg-3 px-4">
+                <img src="IMG/nzva_w.png" style="width:100%;">
+            </div>
 
+            <div class="col-lg-3 px-4">
+                <ul class="nav flex-column footer-nav">
+                    <li class="nav-item nav-item-header">
+                        <a class="nav-link" href="#">Do velit cupidatat</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Aute magna occaecat</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Magna sunt</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Culpa nostrud</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Do velit</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="col-lg-3 px-4">
+                <ul class="nav flex-column footer-nav">
+                    <li class="nav-item nav-item-header">
+                        <a class="nav-link" href="#">Cillum veniam sunt</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Ad do fugiat</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Reprehenderit consectetur</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Adipisicing laborum </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sint enim dolor </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-3 px-4">
+                <ul class="nav flex-column footer-nav">
+                    <li class="nav-item nav-item-header">
+                        <a class="nav-link" href="#">Est nulla minim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Aute magna occaecat</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Exercitation consectetur</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">laborum et dolo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> Dolor ex irure</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<footer class="sponsors">
+
+    <div class="closer-button">
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSponsors" aria-expanded="false" aria-controls="collapseSponsors">
+            <p>›</p>
+        </button>
+    </div>
+
+    <div class="sponsors-inner">
+
+        <div class="container-fluid collapse show" id="collapseSponsors" style="max-width: 1300px;">
+
+            <div class="row p-0">
+
+                <div class="col-lg-4">
+
+
+                    <div class="sponsors-title">
+                        <h4 class="lead-in">Thank you to our sponsors</h4>
+                    </div>
                 </div>
 
-                <div class="col-lg-3 px-4">
-                    <ul class="nav flex-column footer-nav">
-                        <li class="nav-item nav-item-header">
-                            <a class="nav-link" href="#">Do velit cupidatat</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Aute magna occaecat</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Magna sunt</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Culpa nostrud</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Do velit</a>
-                        </li>
-                    </ul>
-
-                </div>
-                <div class="col-lg-3 px-4">
-                    <ul class="nav flex-column footer-nav">
-                        <li class="nav-item nav-item-header">
-                            <a class="nav-link" href="#">Cillum veniam sunt</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Ad do fugiat</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Reprehenderit consectetur</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Adipisicing laborum </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Sint enim dolor </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 px-4">
-                    <ul class="nav flex-column footer-nav">
-                        <li class="nav-item nav-item-header">
-                            <a class="nav-link" href="#">Est nulla minim</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Aute magna occaecat</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Exercitation consectetur</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">laborum et dolo</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"> Dolor ex irure</a>
-                        </li>
-                    </ul>
+                <div class="col-lg-8">
+                    <div  class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="IMG/logos.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="IMG/logos2.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="IMG/logos3.jpg" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
         </div>
     </div>
-
-    <footer class="sponsors">
-
-        <div class="closer-button">
-            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSponsors" aria-expanded="false" aria-controls="collapseSponsors">
-                <p>›</p>
-            </button>
-        </div>
-
-        <div class="sponsors-inner">
-
-            <div class="container-fluid collapse show" id="collapseSponsors" style="max-width: 1300px;">
-
-                <div class="row p-0">
-
-                    <div class="col-lg-4">
-
-
-                        <div class="sponsors-title">
-                            <h4 class="lead-in">Thank you to our sponsors</h4>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-8">
-                        <div  class="carousel slide carousel-fade" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="IMG/logos.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="IMG/logos2.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="IMG/logos3.jpg" class="d-block w-100" alt="...">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </footer>
+</footer>
 </body>
 
 </html>
