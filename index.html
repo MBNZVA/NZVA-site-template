@@ -69,14 +69,6 @@
             </div>
         </div>
 
-        <script>
-            document.querySelector('.search-toggle').addEventListener('click', function () {
-                document.querySelector('.nav').classList.toggle('search-active');
-                document.querySelector('.search-icon').style.display = document.querySelector('.search-icon').style.display === 'none' ? '' : 'none';
-                document.querySelector('.close-icon').style.display = document.querySelector('.close-icon').style.display === 'none' ? '' : 'none';
-            });
-        </script>
-
         <nav class="navbar navbar-expand-lg navbar-light bottom-bar ">
             <div class="container-fluid" style="max-width:1080px">
                 <a class="navbar-brand" href="#">
@@ -91,9 +83,6 @@
                     <ul class="navbar-nav ms-auto ">
 
                         <ul class="d-lg-none quick-links">
-
-
-
                             <br><h4 class="d-lg-none">Quick links</h4>
                             <li class="nav-item d-lg-none"><a class="nav-link" href="#">Find a job</a></li>
                             <li class="nav-item d-lg-none"><a class="nav-link" href="#">Find a vet</a></li>
@@ -274,160 +263,10 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
                 </nav>
-                <div class="CSS-demo">
-                    <button class="CSS-button bi-chevron-down arrow-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#CSS-sidebar" aria-expanded="false" aria-controls="CSS-sidebar">
-                        Styles
-                    </button>
-                    <div class="collapse" id="CSS-sidebar">
-                        <div class="card card-body">
-                            <code style="font-size:0.7rem">   
-                                /* General sidebar links */<br><br>
-
-                                .sidebar-link{<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp; padding:0.5rem;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp; text-decoration: none;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp; color:#0075A8;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp; transition:0.2s;<br>}<br><br>
-
-                                .sidebar-item > i{<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp; padding: 0.25rem;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp; cursor: pointer;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp; border-radius: 0.25rem;<br>}<br><br>
-
-                                .sidebar-item > i:hover{<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp; background: rgba(0,0,0,0.2);<br>}<br><br>
-
-                                .sidebar-item{<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp; font-size: 0.8rem;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp; text-decoration: none;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp; color: #0075A8;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp; border-bottom: 0.08rem solid rgba(0,0,0,0.2);<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp; margin-bottom: 0.8rem;<br>}<br>
-
-                                .sidebar-link:hover{<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp; transform: translateX(0.25rem);<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp; text-decoration: underline;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp; color: #0075A8;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp; transition: 0.2s;<br>}<br><br>
-
-                                /* Parent page link*/<br><br>
-
-                                .sidebar-parent{<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp; color: #0075A8;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp; margin-bottom: 0.8rem;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp; font-size: 0.8rem;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp; transition: 0.2s;<br>}<br><br>
-
-                                .sidebar-parent:hover{<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp; transform: translateX(-0.25rem);<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp; color: #0075A8 ;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp; transition: 0.2s;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp; text-decoration: underline;<br>}<br><br>
-
-
-                                /* Current page highlighted */<br><br>
-
-                                .sidebar-item-current{<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp; background: #0075A8;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp; border-radius: 0.25rem;<br>}<br><br>
-
-                                .sidebar-item-current a, .sidebar-item-current i{<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp; color:white!important;<br>}<br><br>
-
-
-                                /* Sub-page links */<br><br>
-
-                                .sidebar-subs{<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp; margin-top: -1em;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp; margin-bottom: 1em;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp; font-size: 0.8rem;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp; background: rgba(260,260,260,0.8);<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp; border-radius: 0 0 0.25rem 0.25rem;<br>}<br><br>
-                                .sidebar-subs > .list-group a{<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp; background: none;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp; border: none;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp; color: #0075A8;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp; transition: 0.2s;<br>}<br><br>
-
-                                .sidebar-subs > .list-group a:hover{<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp; transform: translateX(0.25rem);<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp; text-decoration: underline;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp; color: #0077aa;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp; transition: 0.2s;<br>}<br><br>
-
-                            </code>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="CSS-demo">
-                    <button class="CSS-button bi-chevron-down arrow-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#JS-sidebar" aria-expanded="false" aria-controls="JS-sidebar">
-                        Script
-                    </button>
-                    <div class="collapse" id="JS-sidebar">
-                        <div class="card card-body">
-                            <code style="font-size:0.7rem">  
-                                &nbsp;&nbsp;&nbsp;&nbsp;   
-
-                                document.addEventListener('DOMContentLoaded', function () {<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;let arrowToggles = document.querySelectorAll('.arrow-toggle');<br><br>
-
-                                &nbsp;&nbsp;&nbsp;&nbsp;arrowToggles.forEach(function (toggle) {<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let target = document.querySelector(toggle.getAttribute('data-bs-target'));<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let bsCollapse = new bootstrap.Collapse(target, { toggle: false });<br><br>
-
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toggle.addEventListener('click', function (event) {<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;event.preventDefault();<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bsCollapse.toggle();<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});<br><br>
-
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;target.addEventListener('show.bs.collapse', function () {<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toggle.classList.remove('bi-chevron-down');<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toggle.classList.add('bi-chevron-up');<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});<br><br>
-
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;target.addEventListener('hide.bs.collapse', function () {<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toggle.classList.remove('bi-chevron-up');<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toggle.classList.add('bi-chevron-down');<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;});<br>});                                
-                            </code>
-                        </div>
-                    </div>
-                </div>
-
-
             </div>
-            <script>
-                document.addEventListener('DOMContentLoaded', function () {
-                    let arrowToggles = document.querySelectorAll('.arrow-toggle');
 
-                    arrowToggles.forEach(function (toggle) {
-                        let target = document.querySelector(toggle.getAttribute('data-bs-target'));
-                        let bsCollapse = new bootstrap.Collapse(target, { toggle: false });
-
-                        toggle.addEventListener('click', function (event) {
-                            event.preventDefault();
-                            bsCollapse.toggle();
-                        });
-
-                        target.addEventListener('show.bs.collapse', function () {
-                            toggle.classList.remove('bi-chevron-down');
-                            toggle.classList.add('bi-chevron-up');
-                        });
-
-                        target.addEventListener('hide.bs.collapse', function () {
-                            toggle.classList.remove('bi-chevron-up');
-                            toggle.classList.add('bi-chevron-down');
-                        });
-                    });
-                });
-            </script>
 
             <div class="col-12 col-md-9 page-content p-2">
                 <div class="container-fluid p-0 w-bg pb-2">
@@ -766,7 +605,7 @@
                                                     <h5>.container-fluid .py-2 .px-0</h5>
                                                     <div class="outline">
                                                         <h5>.row .my-4 .py-4</h5><br>
-                                                <code>[Nested rows]</code>
+                                                        <code>[Nested rows]</code>
                                                         <div class="outline-flex">
                                                             <div class="outline" style="width:50%;">
                                                                 <h5>.col-md-6</h5><br>
@@ -798,7 +637,7 @@
                                 </div>
                             </div>
 
-                        
+
 
 
                             <div class="row content-block">
@@ -1046,10 +885,12 @@
                                             <div class="card card-body">
                                                 <code>
                                                     .list li {<br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;font-size: 0.9rem;<br>
                                                     &nbsp;&nbsp;&nbsp;&nbsp;padding-left: 0.25rem;<br>
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom: 0.5rem;<br>}<br><br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom: 0.25rem;<br>}<br><br>
 
                                                     .list {<br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;margin: 1rem 0;<br>
                                                     &nbsp;&nbsp;&nbsp;&nbsp;padding-left: 1rem;<br>}
                                                 </code>
                                             </div>
@@ -1295,42 +1136,42 @@
                                         </div>
                                     </div>
                                     <div class="CSS-demo">
-                                <button class="CSS-button bi-chevron-down arrow-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#CSS-xxx" aria-expanded="false" aria-controls="CSS-xxx">
-                                    Styles
-                                </button>
-                                <div class="collapse" id="CSS-xxx">
-                                    <div class="card card-body">
-                                        <code> 
-                                                .accordion{<br>
-                                                &nbsp;&nbsp;&nbsp;&nbsp;padding: 0;<br>}<br><br>
-                                                .accordion-item{<br>
-                                                &nbsp;&nbsp;&nbsp;&nbsp;margin: 0.5rem;<br>
-                                                &nbsp;&nbsp;&nbsp;&nbsp;border: none;<br>
-                                                &nbsp;&nbsp;&nbsp;&nbsp;font-size: 0.9rem!important;<br>
-                                                &nbsp;&nbsp;&nbsp;&nbsp;height: 100%;<br>}<br><br>
-                                                .accordion-item button{<br>
-                                                &nbsp;&nbsp;&nbsp;&nbsp;padding: 0.5rem;<br>
-                                                &nbsp;&nbsp;&nbsp;&nbsp;background: #E6F3FB;<br>
-                                                &nbsp;&nbsp;&nbsp;&nbsp;border-radius: 0.25rem!important;<br>
-                                                &nbsp;&nbsp;&nbsp;&nbsp;font-size: 1rem!important;<br>
-                                                &nbsp;&nbsp;&nbsp;&nbsp;font-family: 'Arvo', serif;<br>}<br><br>
-                                                .accordion-item button:focus{<br>
-                                                &nbsp;&nbsp;&nbsp;&nbsp;outline: none !important;<br>
-                                                &nbsp;&nbsp;&nbsp;&nbsp;box-shadow: none!important;<br>
-                                                &nbsp;&nbsp;&nbsp;&nbsp;color: inherit!important;<br>
-                                                &nbsp;&nbsp;&nbsp;&nbsp;background: #E6F3FB;<br>}<br>
+                                        <button class="CSS-button bi-chevron-down arrow-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#CSS-xxx" aria-expanded="false" aria-controls="CSS-xxx">
+                                            Styles
+                                        </button>
+                                        <div class="collapse" id="CSS-xxx">
+                                            <div class="card card-body">
+                                                <code> 
+                                                    .accordion{<br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;padding: 0;<br>}<br><br>
+                                                    .accordion-item{<br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;margin: 0.5rem;<br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;border: none;<br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;font-size: 0.9rem!important;<br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;height: 100%;<br>}<br><br>
+                                                    .accordion-item button{<br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;padding: 0.5rem;<br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;background: #E6F3FB;<br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;border-radius: 0.25rem!important;<br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;font-size: 1rem!important;<br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;font-family: 'Arvo', serif;<br>}<br><br>
+                                                    .accordion-item button:focus{<br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;outline: none !important;<br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;box-shadow: none!important;<br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;color: inherit!important;<br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;background: #E6F3FB;<br>}<br>
 
-                                            </code>
+                                                </code>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
 
                                 </div>
                             </div>
-                             <div class="row content-block">
+                            <div class="row content-block">
                                 <div class="col">
                                     <div class="section-heading">
-                                    <h3 class="green-text">Content grids</h3>
+                                        <h3 class="green-text">Content grids</h3>
                                     </div>
                                 </div>
                             </div>
@@ -1361,9 +1202,6 @@
                                         </div>
                                     </div>
                                 </div>
-
-
-
                             </div>
                         </div>
                     </div>
@@ -1454,6 +1292,41 @@
             </div>
         </div>
     </footer>
+
+
+    <script>
+        document.querySelector('.search-toggle').addEventListener('click', function () {
+            document.querySelector('.nav').classList.toggle('search-active');
+            document.querySelector('.search-icon').style.display = document.querySelector('.search-icon').style.display === 'none' ? '' : 'none';
+            document.querySelector('.close-icon').style.display = document.querySelector('.close-icon').style.display === 'none' ? '' : 'none';
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let arrowToggles = document.querySelectorAll('.arrow-toggle');
+
+            arrowToggles.forEach(function (toggle) {
+                let target = document.querySelector(toggle.getAttribute('data-bs-target'));
+                let bsCollapse = new bootstrap.Collapse(target, { toggle: false });
+
+                toggle.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    bsCollapse.toggle();
+                });
+
+                target.addEventListener('show.bs.collapse', function () {
+                    toggle.classList.remove('bi-chevron-down');
+                    toggle.classList.add('bi-chevron-up');
+                });
+
+                target.addEventListener('hide.bs.collapse', function () {
+                    toggle.classList.remove('bi-chevron-up');
+                    toggle.classList.add('bi-chevron-down');
+                });
+            });
+        });
+    </script>
+
 </body>
 
 </html>
