@@ -5,9 +5,12 @@
     font-size:0.75rem!important;
     border:none;
     border-radius:0.2rem;
-    background:rgba(220,220,220,0.4);
-    color:darkslategray;
+    background:rgba(100,100,100,0.4);
+    color:white;
+    box-sizing: border-box;
 }
+
+
 
 .CSS-demo{
     margin-bottom:0.5rem;
@@ -15,13 +18,38 @@
 
 .CSS-demo code{
     font-size:0.8rem;
-}
-
-.CSS-button:hover{
 
 }
 
 
+
+.outline{
+    padding:0.5rem;
+    border:1px solid black;
+    box-sizing:border-box;
+    margin:0.5rem;
+}
+
+.outline h5, .outline p {
+    font-size:0.75rem;
+    display:inline-block;
+}
+
+.outline code{
+    font-size:0.7rem;
+}
+
+.outline p{
+    margin-left:0.25rem;
+}
+
+.outline-flex{
+    display:flex;
+}
+
+.demo-cb{
+    background:rgba(0,0,0,0.05);
+}
 
 /* Global */
 
@@ -38,7 +66,7 @@ h1 {
     color: #003355;
     font-size:2.25rem;
     font-weight:700;
-    margin-bottom:0.2rem;
+    margin-bottom:0.3rem;
 }
 
 h2 {
@@ -47,7 +75,7 @@ h2 {
     line-height: 1.2em;
     color: #003355;
     font-size:1.75rem;
-    margin-bottom:0.2rem;
+    margin-bottom:0.3rem;
 }
 h3 {
     font-family: 'Arvo', serif;
@@ -55,7 +83,7 @@ h3 {
     font-weight: 300;
     font-size:1.5rem;
     color: #003355;
-    margin-bottom:0.2rem;
+    margin-bottom:0.3rem;
 }
 h4{
     line-height: 1.2em;
@@ -63,7 +91,7 @@ h4{
     font-weight: 300;
     font-size:1.25rem;
     color: #003355;
-    margin-bottom:0.2rem;
+    margin-bottom:0.3rem;
 }
 h5{
     line-height: 1.2em;
@@ -71,14 +99,14 @@ h5{
     font-weight: 500;
     font-size:1rem;
     color: #003355;
-    margin-bottom:0.2rem;
+    margin-bottom:0.3rem;
 }
 
 p {
     font-weight: 300;
-    line-height: 1.7em;
-    font-size:1rem;
-    margin-bottom:0.2rem;
+    line-height: 1.5em;
+    font-size:0.9rem;
+    margin-bottom:0.5rem;
 }
 
 /* Custom type */
@@ -91,7 +119,7 @@ p {
     width:100%;
     border-radius:0.5rem;
     padding:12rem 1.5rem 1.5rem 1.5rem;
-    margin-bottom:1rem;
+
     background-size:cover!important;
 }
 
@@ -110,15 +138,18 @@ p {
 
 .list li{
     padding-left:0.25rem;
-    margin-bottom:0.5rem;
-
+    margin-bottom:0.25rem;
+    font-size:0.9rem;
 }
+
+
 .list{
+    margin:1rem 0;
     padding-left:1rem;
 }
 
 .blockquote{
-    font-size:1rem;
+    font-size:0.9rem;
     border-left:0.5rem solid #0077aa;
     padding:0.5rem;
     background:#e3f5fe;
@@ -133,7 +164,6 @@ p {
 
 .section-heading{
     border-bottom:0.16rem dotted #01626b;
-    margin-bottom:1em;
 }
 
 
@@ -146,20 +176,40 @@ p {
     background:#E6F3FB;
     border-radius:0.5rem;
 }
+.g-bg{
+
+    background:rgba(0,0,0,0.05);
+}
+
+
+.content-block{
+    padding:0.5rem 0rem;
+    margin:0.5rem 0;
+/*    background:rgba(0,0,0,0.1);*/
+}
+
+.home-content-block{
+padding:1.5rem;
+margin-top:1rem;
+margin-bottom:1rem;
+}
+
+.content-block > .col{
+}
 
 /* Buttons */
 .lg-button{
     font-size: 1.2rem;
     font-weight: 700;
-    margin-top: 1rem;
-    margin-bottom:1rem;
+    margin-top: 0.5rem;
+    margin-bottom:0.5rem;
 }
 
 .sm-button{
     font-size:1rem;
     font-weight:500;
-    margin-top: 0.5rem;
-    margin-bottom:0.5rem;
+    margin-top: 0.25rem;
+    margin-bottom:0.25rem;
 }
 
 /* In-line link */
@@ -278,6 +328,8 @@ p {
     transition: 0.2s;
 }
 
+
+
 /* Parent page link*/
 
 .sidebar-parent{
@@ -335,14 +387,15 @@ p {
 
 /* content box */
 
-.content-box{
+.content-grid{
     border-radius: 0.25em;
     overflow: hidden!important;
     height: 100%;
     position: relative;
+
 }
 
-.content-box-image{
+.content-grid-image{
     background-size: cover!important;
 }
 
@@ -354,11 +407,15 @@ p {
     height: 11rem;
 }
 
-.content-box-text{
+.content-grid-text{
     padding: 1rem 0 3.2rem 0;
 }
 
-.content-box-button{
+.no-button{
+    padding: 1rem 0rem;
+}
+
+.content-grid-button{
     padding: 0 0 0.5rem 0;
     position: absolute;
     bottom: 0;
@@ -381,7 +438,7 @@ p {
 
 .breadcrumb{
     font-size:0.8rem;
-    margin-bottom:0.5rem;
+    margin:0;
 }
 
 .breadcrumb a{
@@ -407,12 +464,13 @@ p {
     padding: 0;
 }
 .accordion-item{
-    margin: 0.5rem;
+    margin-bottom: 0.5rem;
     border: none;
     height: 100%;
+    font-size: 0.9rem!important;
 }
 .accordion-item button{
-    padding: 0.5rem;
+    padding: 1rem;
     background: #E6F3FB;
     border-radius: 0.25rem!important;
     font-size: 1rem!important;
