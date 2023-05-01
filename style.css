@@ -17,7 +17,7 @@
 }
 
 .CSS-demo code{
-    font-size:0.8rem;
+    font-size:0.7rem;
 
 }
 
@@ -140,12 +140,30 @@ p {
     padding-left:0.25rem;
     margin-bottom:0.25rem;
     font-size:0.9rem;
+    font-weight:300;
 }
+
 
 
 .list{
     margin:1rem 0;
     padding-left:1rem;
+}
+
+ul.list{
+    list-style-type:;
+}
+
+ul.list > li > ul{
+    list-style-type:"‣";
+    padding-left:0.5rem;
+    margin-top:0.5rem;
+}
+
+ol.list > li > ol{
+    list-style-type:lower-alpha;
+    padding-left:1rem;
+    margin-top:0.5rem;
 }
 
 .blockquote{
@@ -164,6 +182,7 @@ p {
 
 .section-heading{
     border-bottom:0.16rem dotted #01626b;
+    scroll-margin-top:160px;
 }
 
 
@@ -176,6 +195,12 @@ p {
     background:#E6F3FB;
     border-radius:0.5rem;
 }
+
+.hp-content-block{
+    padding:2rem 1.5rem;
+    margin:1.5rem 0;
+}
+
 .g-bg{
 
     background:rgba(0,0,0,0.05);
