@@ -10,13 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
-
-
-    <style>
-
-
-    </style>
-
 </head>
 
 
@@ -375,14 +368,14 @@
                         <div class="row content-block">
                             <div class="col">
                                 <div class="section-heading" id="topnav-sect">
-                                    <h3 class="green-text">Top navigation</h3>
+                                    <h3 class="green-text">Fixed bars</h3>
                                 </div>
                             </div>
                         </div>
                         <div class="row content-block">
                             <div class="col">
-                                <h4>Requirements</h4>
-
+                                <h4>Top navigation (menu bar)</h4>
+                                <h5 class="lead-in">Specifications</h5>
                                 <ul class="list">
                                     <li>Two separate bars on larger screens and one on smaller screens (992px and below).</li>
                                     <ul>
@@ -392,6 +385,22 @@
                                     <li>Dropdowns should be hoverable on larger screens and togglable on smaller screen (992px and below)</li>
                                     <li>Menu-links should always fit on a single line, and collapse into a toggle where this is not possible</li>
                                 </ul>
+                            </div>
+                        </div>
+                        <div class="row content-block">
+                            <div class="col">
+                                <h4>Sponsors bar</h4>
+                                <h5 class="lead-in">Purpose</h5>
+                                <p>The sponsors bar is a way to make sure NZVA partners are being fairly showcased on our website.</p>
+                                <h5 class="lead-in">Specifications</h5>
+                                <ul class="list">
+                                    <li>Continous carousel displaying NZVA partner logos</li>
+                                    <li>Fixed at the bottom of every page</li>
+                                    <li>Able to be hidden by the end-user</li>
+                                    <li>The bar must not cover the page footer</li>
+                                </ul>
+                                <h5 class="lead-in">Additional request</h5>
+                                <p>Ideally the frequency that a sponsor logo will show up will be determined by its sponsor level. I.e. diamond sponsor logos should show up twice as often as gold sponsor logos, and gold logos twice as often as silver.</p>
                             </div>
                         </div>
 
@@ -407,7 +416,11 @@
                         <div class="row content-block">
                             <div class="col">
                                 <h4 class="">Two-column page structure</h4>
-                                <p>The template uses a mix of Bootstrap classes and custom classes to define the spacing. This diagram describes the basic structure with class-names and spacing CSS. Please note that this doesn't take into account mobile sizing.</p>
+                                <h5 class="lead-in">Purpose</h5>
+                                <p>This template combines Bootstrap 5.3 classes and custom elements to create a modular design. Employing rems for spacing and Bootstrap responsiveness. It acts as a starting point for developers to modify and integrate within the Silverstripe CMS. </p>
+                                <p>
+                                    
+                                Please note that this diagram doesn't include mobile sizing; developers should confirm cross-device adaptability.</p>
 
 
 
@@ -814,7 +827,7 @@
                                                     &nbsp;&nbsp;&nbsp;&nbsp;font-family: 'Ubuntu', sans-serif;<br>
                                                     &nbsp;&nbsp;&nbsp;&nbsp;font-weight: 300;<br>
                                                     &nbsp;&nbsp;&nbsp;&nbsp;line-height: 1.5em;<br>
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;font-size: 0.9rem;<br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;font-size: 1rem;<br>
                                                     &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom:0.5rem;<br>}
                                                 </code>
                                             </div>
@@ -867,9 +880,9 @@
                                         </button>
                                         <div class="collapse" id="CSS-blockquote">
                                             <div class="card card-body">
-                                                <code>
+                                                <code>ß
                                                     .blockquote{<br>
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;font-size: 0.9rem;<br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;font-size: 1rem;<br>
                                                     &nbsp;&nbsp;&nbsp;&nbsp;border-left: 0.5rem solid #0077aa;<br>
                                                     &nbsp;&nbsp;&nbsp;&nbsp;padding: 0.5rem;<br>
                                                     &nbsp;&nbsp;&nbsp;&nbsp;background: #e3f5fe;<br>
@@ -937,15 +950,28 @@
                                         <div class="collapse" id="CSS-list">
                                             <div class="card card-body">
                                                 <code>
-                                                    .list li {<br>
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;font-size: 0.9rem;<br>
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;padding-left: 0.25rem;<br>
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;font-weight: 300;<br>
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom: 0.25rem;<br>}<br><br>
-
-                                                    .list {<br>
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;margin: 1rem 0;<br>
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;padding-left: 1rem;<br>}
+                                                    .list li{<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;padding-left:0.25rem;<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom:0.5rem;<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;font-size:1rem;<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;font-weight:300;<br>}<br><br>
+                                                    .list{<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;margin:1rem 0;<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;padding-left:1.5rem;<br>}<br><br>
+                                                    
+                                                    ul.list > li > ul{<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;list-style-type:"‣";<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;padding-left:0.5rem;<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;margin-top:0.5rem;<br>}<br><br>
+                                                    
+                                                    ul.list > li > ul > li, ul.list > li > ol > li{<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;padding-left:0.5rem;<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom:0.25rem;<br>}<br><br>
+                                                    
+                                                    ol.list > li > ol{<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;list-style-type:lower-alpha;<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;padding-left:1rem;<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;margin-top:0.5rem;<br>}
                                                 </code>
                                             </div>
                                         </div>
@@ -1201,7 +1227,7 @@
                                                     .accordion-item{<br>
                                                     &nbsp;&nbsp;&nbsp;&nbsp;margin: 0.5rem;<br>
                                                     &nbsp;&nbsp;&nbsp;&nbsp;border: none;<br>
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;font-size: 0.9rem!important;<br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;font-size: 1rem!important;<br>
                                                     &nbsp;&nbsp;&nbsp;&nbsp;height: 100%;<br>}<br><br>
                                                     .accordion-item button{<br>
                                                     &nbsp;&nbsp;&nbsp;&nbsp;padding: 0.5rem;<br>
@@ -1229,6 +1255,25 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="row content-block">
+                                <div class="col">
+                                    <h4>Purpose</h4>
+                                    <p>This content grid system is a modular and adaptable design element intended to showcase various types of content such as links, articles, news, and other relevant resources in an organized and visually appealing manner. This grid system is designed to enhance the user experience by providing easy access to key information and resources.</p>
+                                </div>
+                            </div>
+                            <div class="row content-block">
+                                <div class="col">
+                                    <h4>Design Components:</h4>
+                                    <ol class="list">
+                                        <li>Image: The image serves as a visual representation of the content, capturing the user's attention and providing a abstracted preview of the information.</li>
+                                        <li>Blurb: The blurb is a brief summary or teaser of the content, giving users an idea of what they can expect when engaging with the resource.</li>
+                                        <li>Button: The button serves as a clear call-to-action, encouraging users to click and access the content.</li>
+                                    </ol>
+
+
+                                </div>
+                            </div>
                             <div class="row content-block">
                                 <div class="col-lg-6 my-2">
                                     <div class="content-grid">
@@ -1246,6 +1291,47 @@
                                 <div class="col-lg-6 my-2">
                                     <div class="content-grid">
                                         <div class="content-grid-image cbi-lg" style="background:url('https://picsum.photos/seed/1681423547456/400/300');">
+                                        </div>
+                                        <div class="content-grid-text">
+                                            <h5>Tempor id reprehenderit sit quis aute occaecat ullamco.</h5>
+                                            <p class="small-text">Commodo irure culpa officia commodo elit adipisicing veniam do in dolore incididunt. Commodo irure eiusmod fugiat tempor ad et in commodo aliqua proident aliqua. Minim eu dolor nulla dolore.</p>
+                                        </div>
+                                        <div class="content-grid-button">
+                                            <a href="" class="plain-button sm-button">Bottom aligned button</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row content-block">
+                                <div class="col-lg-4 my-2">
+                                    <div class="content-grid">
+                                        <div class="content-grid-image cbi-lg" style="background:url('https://picsum.photos/seed/349439849/400/300');">
+                                        </div>
+                                        <div class="content-grid-text">
+                                            <h5>Laborum aliqua officia excepteur.</h5>
+                                            <p class="small-text">Labore proident sint officia eiusmod ea. Id nulla nisi laboris. Tempor commodo Lorem dolore sunt veniam eu. Lorem velit eiusmod sit ipsum consequat sunt laborum quis eu et magna mollit ad nostrud duis. Adipisicing sunt magna elit nulla anim nulla id fugiat voluptate laboris amet labore. Veniam aute proident est in qui. </p>
+                                        </div>
+                                        <div class="content-grid-button">
+                                            <a href="" class="plain-button sm-button">Bottom aligned button</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 my-2">
+                                    <div class="content-grid">
+                                        <div class="content-grid-image cbi-lg" style="background:url('https://picsum.photos/seed/4320848423804802/400/300');">
+                                        </div>
+                                        <div class="content-grid-text">
+                                            <h5>Tempor id reprehenderit sit quis aute occaecat ullamco.</h5>
+                                            <p class="small-text">Commodo irure culpa officia commodo elit adipisicing veniam do in dolore incididunt. Commodo irure eiusmod fugiat tempor ad et in commodo aliqua proident aliqua. Minim eu dolor nulla dolore.</p>
+                                        </div>
+                                        <div class="content-grid-button">
+                                            <a href="" class="plain-button sm-button">Bottom aligned button</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 my-2">
+                                    <div class="content-grid">
+                                        <div class="content-grid-image cbi-lg" style="background:url('https://picsum.photos/seed/23342308/400/300');">
                                         </div>
                                         <div class="content-grid-text">
                                             <h5>Tempor id reprehenderit sit quis aute occaecat ullamco.</h5>

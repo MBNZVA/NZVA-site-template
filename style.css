@@ -18,7 +18,7 @@
 
 .CSS-demo code{
     font-size:0.7rem;
-
+    
 }
 
 
@@ -105,7 +105,7 @@ h5{
 p {
     font-weight: 300;
     line-height: 1.5em;
-    font-size:0.9rem;
+    font-size:1rem;
     margin-bottom:0.5rem;
 }
 
@@ -119,7 +119,7 @@ p {
     width:100%;
     border-radius:0.5rem;
     padding:12rem 1.5rem 1.5rem 1.5rem;
-
+    
     background-size:cover!important;
 }
 
@@ -138,26 +138,25 @@ p {
 
 .list li{
     padding-left:0.25rem;
-    margin-bottom:0.25rem;
-    font-size:0.9rem;
+    margin-bottom:0.5rem;
+    font-size:1rem;
     font-weight:300;
 }
 
-
-
 .list{
     margin:1rem 0;
-    padding-left:1rem;
-}
-
-ul.list{
-    list-style-type:;
+    padding-left:1.5rem;
 }
 
 ul.list > li > ul{
     list-style-type:"‣";
     padding-left:0.5rem;
     margin-top:0.5rem;
+}
+
+ul.list > li > ul > li, ul.list > li > ol > li{
+    padding-left:0.5rem;
+    margin-bottom:0.25rem;
 }
 
 ol.list > li > ol{
@@ -167,7 +166,7 @@ ol.list > li > ol{
 }
 
 .blockquote{
-    font-size:0.9rem;
+    font-size:1rem;
     border-left:0.5rem solid #0077aa;
     padding:0.5rem;
     background:#e3f5fe;
@@ -183,6 +182,7 @@ ol.list > li > ol{
 .section-heading{
     border-bottom:0.16rem dotted #01626b;
     scroll-margin-top:160px;
+    margin-top:1rem;
 }
 
 
@@ -202,7 +202,7 @@ ol.list > li > ol{
 }
 
 .g-bg{
-
+    
     background:rgba(0,0,0,0.05);
 }
 
@@ -210,13 +210,13 @@ ol.list > li > ol{
 .content-block{
     padding:0.5rem 0rem;
     margin:0.5rem 0;
-/*    background:rgba(0,0,0,0.1);*/
+    /*    background:rgba(0,0,0,0.1);*/
 }
 
 .home-content-block{
-padding:1.5rem;
-margin-top:1rem;
-margin-bottom:1rem;
+    padding:1.5rem;
+    margin-top:1rem;
+    margin-bottom:1rem;
 }
 
 .content-block > .col{
@@ -417,7 +417,7 @@ margin-bottom:1rem;
     overflow: hidden!important;
     height: 100%;
     position: relative;
-
+    
 }
 
 .content-grid-image{
@@ -492,7 +492,7 @@ margin-bottom:1rem;
     margin-bottom: 0.5rem;
     border: none;
     height: 100%;
-    font-size: 0.9rem!important;
+    font-size: 1rem!important;
 }
 .accordion-item button{
     padding: 1rem;
@@ -684,27 +684,27 @@ header{
 }
 
 @media (min-width: 992px){
-
+    
     .dropdown-menu{
         box-shadow: 1px 0px 10px rgba(20,20,20,0.2);
     }
-
+    
     .dropdown:hover .dropdown-menu {
         display: block;
         opacity:1;
         animation: dropdown 0.5s;
     }
-
-
+    
+    
 }
 
 
 @media (max-width:992px){
-
+    
     .bottom-bar{
-
+        
     }
-
+    
     .navbar-collapse.show{
         height:90vh;
         overflow:scroll;
@@ -712,29 +712,29 @@ header{
         padding-bottom:10vh;
         padding:0.5rem 0.5rem 10vh 0.5rem;
     }
-
+    
     header .nav-link{
         padding:0.6rem;
         border-bottom:0.05rem solid rgba(100,100,100,0.2);
     }
-
+    
     header{
         padding-bottom:2rem;
     }
-
+    
     .collapsing{
         -webkit-transition: none;
         transition: none;
     }
-
-
+    
+    
 }
 
 .quick-links{
     list-style: none;
     padding:0;
-
-
+    
+    
 }
 
 .dropdown-menu {
@@ -776,7 +776,7 @@ header{
 }
 
 .dropdown-menu.show{
-
+    
     right:0!important;
     left:auto;
     margin-top:0;
@@ -798,7 +798,7 @@ a.sub-item{
     margin-left:0.5rem;
     padding-left:0px;
     border-radius:0.5rem;
-
+    
 }
 
 
