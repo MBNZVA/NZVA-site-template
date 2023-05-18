@@ -11,21 +11,44 @@
 }
 
 
-
 .CSS-demo{
     margin-bottom:0.5rem;
+
 }
 
 .CSS-demo code{
-    font-size:0.7rem;
-    
+    font-size:0.7rem!important;
+   
+}
+
+c1{
+    text-indent: 1rem;
+    display:block;
+    color:#2c9191;
+}
+
+
+
+.c-2{
+    text-indent: 2rem;
+    display:block;
+}
+
+
+
+c-e{
+    display:block;
+    margin-top:0.7rem;
+    margin-bottom:0.7rem;
+    color:#126363;
 }
 
 
 
 .outline{
     padding:0.5rem;
-    border:1px solid black;
+    border:1px solid grey;
+    border-radius:0.5rem;
     box-sizing:border-box;
     margin:0.5rem;
 }
@@ -152,6 +175,7 @@ ul.list > li > ul{
     list-style-type:"‣";
     padding-left:0.5rem;
     margin-top:0.5rem;
+    margin-bottom:1rem;
 }
 
 ul.list > li > ul > li, ul.list > li > ol > li{
@@ -165,14 +189,15 @@ ol.list > li > ol{
     margin-top:0.5rem;
 }
 
+
+
 .blockquote{
+    padding:1rem;
     font-size:1rem;
-    border-left:0.5rem solid #0077aa;
-    padding:0.5rem;
-    background:#e3f5fe;
-    border-radius:0.5rem;
-    box-sizing: border-box;
-    margin:1.1rem 0;
+    font-weight:300;
+    border-radius:0.25rem;
+    background:rgba(0, 119, 170,0.05);
+    border-left:5px solid rgba(0, 119, 170,1);
 }
 
 .blockquote-footer{
@@ -183,6 +208,33 @@ ol.list > li > ol{
     border-bottom:0.16rem dotted #01626b;
     scroll-margin-top:160px;
     margin-top:1rem;
+}
+
+
+.callout{
+    padding:1rem;
+    border-radius:0.25rem;
+    margin:1rem 0rem;
+}
+
+.callout-info{
+    background:rgba(18,220,230,0.1);
+    border-left:5px solid rgba(18,220,230,1);
+}
+
+.callout-note{
+    background:rgba(255, 234, 71,0.2);
+    border-left:5px solid rgba(255,234,71,1);
+}
+
+.callout-warning{
+    background:rgba(255,134,122,0.1);
+    border-left:5px solid rgba(255,134,122,1);
+}
+
+.callout b{
+    color:#003355;
+    font-weight:400;
 }
 
 
@@ -202,9 +254,12 @@ ol.list > li > ol{
 }
 
 .g-bg{
-    
     background:rgba(0,0,0,0.05);
 }
+
+
+
+
 
 
 .content-block{
@@ -242,9 +297,11 @@ ol.list > li > ol{
     color:#0077aa!important;
     cursor:pointer;
     font-weight:400;
+    text-decoration:none;
 }
 .inline-button:hover{
     color:#003355!important;
+    text-decoration: underline;
 }
 
 /* Plain text button */
@@ -733,8 +790,7 @@ header{
 .quick-links{
     list-style: none;
     padding:0;
-    
-    
+      
 }
 
 .dropdown-menu {
